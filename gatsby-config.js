@@ -1,8 +1,10 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Strata by HTML5 UP",
-    author: "Hunter Chang",
-    description: "A Gatsby.js Starter based on Strata by HTML5 UP"
+    title: 'Pablo Maceda',
+    author: 'Pablo Maceda',
+    description: 'Pablo Maceda - Back-end developer - Portfolio',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -19,6 +21,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en',
+      },
+    },
   ],
 }

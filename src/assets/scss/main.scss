@@ -40,8 +40,8 @@
 		)
 	));
 
-	$size-header-width: 35%;
-	$size-header-pad: 4em;
+	$size-header-width: 24%;
+	$size-header-pad: 2em;
 
 /* Basic */
 
@@ -800,8 +800,8 @@
 		@include vendor('transition', ('background-color #{_duration(transition)} ease-in-out', 'color #{_duration(transition)} ease-in-out', 'border-color #{_duration(transition)} ease-in-out'));
 		background-color: transparent;
 		border-radius: _size(border-radius);
-		border: solid 3px _palette(border);
-		color: _palette(fg-bold) !important;
+		border: solid 3px _palette(accent1, bg);
+		color: _palette(accent1, bg) !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: _font(weight-bold);
@@ -817,6 +817,7 @@
 		&:hover {
 			border-color: _palette(accent1, bg);
 			color: _palette(accent1, bg) !important;
+			background-color: transparentize(_palette(accent2, bg), 0.9);
 		}
 
 		&:active {
@@ -903,10 +904,10 @@
 		@include vendor('justify-content', 'space-between');
 		background-color:		_palette(accent2, bg);
 		background-attachment:	scroll,								fixed;
-		background-image:		url('images/overlay.png'),			url('../images/bg.jpg');
-		background-position:	top left,							top left;
-		background-repeat:		repeat,								no-repeat;
-		background-size:		auto,								auto 100%;
+		background-image:		url('../images/background.png');
+		// background-position:	top left,							top left;
+		background-repeat:		repeat;
+		// background-size:		auto,								auto 100%;
 		color: _palette(accent2, fg);
 		height: 100%;
 		left: 0;
@@ -943,7 +944,7 @@
 
 		.image.avatar {
 			margin: 0 0 (_size(element-margin) * 0.5) 0;
-			width: 6.25em;
+			width: 8em;
 		}
 	}
 
@@ -955,6 +956,43 @@
 
 			a {
 				color: _palette(accent2, fg-light);
+			}
+		}
+
+		
+	}
+
+/* Main */
+
+	#main {
+		margin-left: $size-header-width;
+		max-width: 50em + $size-header-pad;
+		padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
+		width: calc(100% - #{$size-header-width});
+
+		> section {
+			margin: $size-header-pad 0 0 0;
+			padding: $size-header-pad 0 0 0;
+
+			&:first-child {
+				margin-top: 0;
+				padding-top: 0;
+			}
+
+			h2, h3, h4, h5, h6 {
+				color: _palette(accent2, fg-bold);
+
+				strong {
+					color: _palette(accent1, bg);
+					float: right;
+				}
+			}
+	
+			h1 {
+				color: _palette(accent2, fg);
+				font-size: 1.35em;
+				line-height: 1.75em;
+				margin: 0;
 			}
 		}
 
@@ -981,27 +1019,6 @@
 				a {
 					color: inherit;
 				}
-			}
-		}
-	}
-
-/* Main */
-
-	#main {
-		margin-left: $size-header-width;
-		max-width: 50em + $size-header-pad;
-		padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
-		width: calc(100% - #{$size-header-width});
-
-		> section {
-			border-top: solid 2px _palette(border);
-			margin: $size-header-pad 0 0 0;
-			padding: $size-header-pad 0 0 0;
-
-			&:first-child {
-				border-top: 0;
-				margin-top: 0;
-				padding-top: 0;
 			}
 		}
 	}
@@ -1207,16 +1224,8 @@
 
 				h1 {
 					font-size: 1.25em;
-
-					br {
-						display: none;
-					}
 				}
-			}
 
-		/* Footer */
-
-			#footer {
 				.copyright {
 					li {
 						border-left-width: 0;
@@ -1247,11 +1256,7 @@
 
 		/* Basic */
 
-			h1, h2, h3, h4, h5, h6 {
-				br {
-					display: none;
-				}
-			}
+
 
 		/* List */
 
@@ -1281,9 +1286,17 @@
 
 				h1 {
 					font-size: 1.75em;
+				}
 
-					br {
-						display: inline;
+				.copyright {
+					margin: 0 0 (_size(element-margin) * 0.5) 0;
+
+					li {
+						border-left-width: 1px;
+						display: inline-block;
+						line-height: 1em;
+						margin-left: 0.75em;
+						padding-left: 0.75em;
 					}
 				}
 			}
@@ -1300,18 +1313,6 @@
 
 				.icons {
 					margin: 0 0 (_size(element-margin) * 0.5) 0;
-				}
-
-				.copyright {
-					margin: 0 0 (_size(element-margin) * 0.5) 0;
-
-					li {
-						border-left-width: 1px;
-						display: inline-block;
-						line-height: 1em;
-						margin-left: 0.75em;
-						padding-left: 0.75em;
-					}
 				}
 			}
 
@@ -1468,16 +1469,6 @@
 			#header {
 				padding: ($size-header-pad * 3) $size-header-pad;
 
-				h1 {
-					br {
-						display: none;
-					}
-				}
-			}
-
-		/* Footer */
-
-			#footer {
 				.copyright {
 					li {
 						border-left-width: 0;
