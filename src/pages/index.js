@@ -33,7 +33,6 @@ export default () => {
               HTML5 UP
             </a>
           </li>
-          ß
         </ul>
       </div>
     </Layout>
