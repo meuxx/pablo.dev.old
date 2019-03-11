@@ -1,1 +1,6 @@
+# Redirect domain aliases to primary domain
+https://www.pablo.dev/* https://pablo.dev/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
 https://eloquent-beaver-2476a6.netlify.com/* https://pablo.dev/:splat 301!
+
