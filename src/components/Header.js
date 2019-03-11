@@ -31,7 +31,7 @@ export default () => (
       <h1>
         <strong>Pablo Maceda</strong>
         <br />
-        <a href="contact@contact@pablo.dev">contact@pablo.dev</a>
+        <a href="mailto:contact@pablo.dev">contact@pablo.dev</a>
         <br />
         <br />
         Back end developer at{' '}
