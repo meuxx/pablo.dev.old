@@ -8,7 +8,7 @@ class Footer extends React.Component {
           <ul className="icons">
             <li>
               <a
-                href="mailto:contact:pablo.dev"
+                href="mailto:contact@pablo.dev"
                 className="icon fa-envelope-o"
                 aria-label="Email"
               >
