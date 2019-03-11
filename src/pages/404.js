@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 
-const NotFoundPage = () => (
+export default () => (
   <Layout>
     <div id="main">
       <Helmet>
@@ -15,5 +15,3 @@ const NotFoundPage = () => (
     </div>
   </Layout>
 )
-
-export default NotFoundPage
