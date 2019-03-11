@@ -9,8 +9,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'pablo.dev',
+        short_name: 'pablo.dev',
         start_url: '/',
         background_color: '#101010',
         theme_color: '#033e6b',
@@ -40,7 +40,7 @@ module.exports = {
         fonts: [
           {
             family: `Source Sans Pro`,
-            variants: [`400`, `400italic`]
+            variants: [`400`, `400italic`],
           },
         ],
       },
