@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
   siteMetadata: {
     title: 'Pablo Maceda',
@@ -28,5 +26,14 @@ module.exports = {
         lang: 'en',
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets/images`,
+        name: 'images',
+      },
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
   ],
 }
