@@ -15,11 +15,10 @@ module.exports = {
         background_color: '#101010',
         theme_color: '#033e6b',
         display: 'minimal-ui',
-        icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/icon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
@@ -45,6 +44,7 @@ module.exports = {
           },
         ],
       },
-    }
+    },
+    'gatsby-plugin-offline',
   ],
 }
