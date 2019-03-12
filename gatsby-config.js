@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Pablo Maceda',
     author: 'Pablo Maceda',
-    description: 'Pablo Maceda - Back-end developer - Portfolio',
-    siteUrl: 'https://pablo.dev'
+    description: 'Back-end developer in London, UK',
+    siteUrl: 'https://pablo.dev',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
