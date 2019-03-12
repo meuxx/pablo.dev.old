@@ -11,7 +11,7 @@ export default () => {
         childImageSharp {
           # Specify the image processing specifications right in the query.
           # Makes it trivial to update as your page's design changes.
-          fluid(maxWidth: 128) {
+          fluid(maxWidth: 256) {
             ...GatsbyImageSharpFluid
           }
         }
