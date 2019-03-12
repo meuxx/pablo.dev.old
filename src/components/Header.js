@@ -37,7 +37,7 @@ export default () => {
           <br /> <a href="mailto:contact@pablo.dev">contact@pablo.dev</a>
         </h1>
         <br />
-        <h1>
+        <h2>
           Back-end developer at{' '}
           <a
             href="https://www.kooomo.com/"
@@ -47,7 +47,7 @@ export default () => {
             kooomo.com
           </a>
           <br /> London, UK
-        </h1>
+        </h2>
       </div>
       <Footer />
     </header>
