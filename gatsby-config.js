@@ -1,9 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Pablo Maceda | Back-end developer in London, UK',
-    description: `I'm Pablo Maceda, back-end developer offering 5 years of
-    experience, with a solid background as PHP developer and a broad technical
-    skill set.`,
+    description: `I'm Pablo Maceda, back-end developer offering 5 years of experience, with a solid background as PHP developer and a broad technical skill set`,
     author: 'Pablo Maceda',
     siteUrl: 'https://pablo.dev',
   },
