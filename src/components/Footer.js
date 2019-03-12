@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default () => (
-  <div id="footer">
+  <footer id="footer">
     <div className="inner">
       <ul className="icons">
         <li>
@@ -9,6 +9,7 @@ export default () => (
             href="mailto:contact@pablo.dev"
             className="icon fa-envelope-o"
             aria-label="Email"
+            title="Email"
           >
             <span className="label">Email</span>
           </a>
@@ -20,6 +21,7 @@ export default () => (
             rel="noopener noreferrer"
             target="_blank"
             aria-label="GitLab"
+            title="GitLab"
           >
             <span className="label">GitLab</span>
           </a>
@@ -31,11 +33,12 @@ export default () => (
             rel="noopener noreferrer"
             target="_blank"
             aria-label="GitHub"
+            title="GitHub"
           >
             <span className="label">GitHub</span>
           </a>
         </li>
       </ul>
     </div>
-  </div>
+  </footer>
 )

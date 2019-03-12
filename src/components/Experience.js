@@ -2,10 +2,12 @@ import React from 'react'
 
 export default () => (
   <section id="two">
-    <h2>Experience</h2>
-    <h3>
-      Kooomo (Dublin, Ireland) <strong>April 2014 – Present</strong>
-    </h3>
+    <header>
+      <h2>Experience</h2>
+      <h3>
+        Kooomo (Dublin, Ireland) <strong>April 2014 – Present</strong>
+      </h3>
+    </header>
     <p>
       Developed and supported the ecommerce platform with special focus on
       performance improvements and the implementation of new technologies to

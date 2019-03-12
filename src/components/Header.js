@@ -29,12 +29,20 @@ export default () => {
               fluid={data.avatar.childImageSharp.fluid}
               className="image avatar"
               title="Avatar"
+              alt="Avatar"
             />
           )}
         />
         <h1>
           <strong>Pablo Maceda</strong>
-          <br /> <a href="mailto:contact@pablo.dev">contact@pablo.dev</a>
+          <br />{' '}
+          <a
+            href="mailto:contact@pablo.dev"
+            aria-label="Contact email"
+            title="Contact email"
+          >
+            contact@pablo.dev
+          </a>
         </h1>
         <br />
         <h2>
@@ -43,6 +51,7 @@ export default () => {
             href="https://www.kooomo.com/"
             rel="noopener noreferrer"
             target="_blank"
+            title="Kooomo"
           >
             kooomo.com
           </a>

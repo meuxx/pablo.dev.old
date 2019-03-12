@@ -2,7 +2,9 @@ import React from 'react'
 
 export default () => (
   <section id="one">
-    <h2>About me</h2>
+    <header>
+      <h2>About me</h2>
+    </header>
     <p>
       I'm <strong>Pablo Maceda</strong>, back-end developer offering 5 years of
       experience, with a solid background as PHP developer and a broad technical
@@ -21,6 +23,8 @@ export default () => (
           className="button"
           rel="noopener noreferrer"
           target="_blank"
+          aria-label="Curriculum Vitae"
+          title="Curriculum Vitae"
         >
           View CV
         </a>
