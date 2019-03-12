@@ -11,8 +11,8 @@ export default () => {
         childImageSharp {
           # Specify the image processing specifications right in the query.
           # Makes it trivial to update as your page's design changes.
-          fixed(width: 125, height: 125) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 128) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -26,7 +26,7 @@ export default () => {
           query={avatarQuery}
           render={data => (
             <Img
-              fixed={data.avatar.childImageSharp.fixed}
+              fluid={data.avatar.childImageSharp.fluid}
               className="image avatar"
             />
           )}
