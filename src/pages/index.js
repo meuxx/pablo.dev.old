@@ -5,26 +5,29 @@ import Layout from '../components/layout'
 import About from '../components/About'
 import Experience from '../components/Experience'
 
-import * as config from '../../gatsby-config'
+import { siteMetadata } from '../../gatsby-config'
 import image from '../assets/images/open_graph.jpg'
 
 export default () => (
   <Layout>
     <Helmet>
       {/* General tags */}
-      <title>{config.siteMetadata.title}</title>
-      <meta name="description" content={config.siteMetadata.description} />
+      <title>{siteMetadata.title}</title>
+      <meta name="description" content={siteMetadata.description} />
       <meta name="image" content={image} />
 
       {/* OpenGraph tags */}
-      <meta property="og:url" content={config.siteMetadata.siteUrl} />
+      <meta property="og:url" content={siteMetadata.siteUrl} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={config.siteMetadata.title} />
-      <meta
-        property="og:description"
-        content={config.siteMetadata.description}
-      />
+      <meta property="og:title" content={siteMetadata.title} />
+      <meta property="og:description" content={siteMetadata.description} />
       <meta property="og:image" content={image} />
+
+      {/* Twitter Card tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={siteMetadata.title} />
+      <meta name="twitter:description" content={siteMetadata.description} />
+      <meta name="twitter:image" content={image} />
     </Helmet>
 
     <div id="main">
