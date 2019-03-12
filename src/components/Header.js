@@ -28,6 +28,7 @@ export default () => {
             <Img
               fluid={data.avatar.childImageSharp.fluid}
               className="image avatar"
+              title="Avatar"
             />
           )}
         />
@@ -39,7 +40,7 @@ export default () => {
           <br />
           Back-end developer at{' '}
           <a
-            href="https://kooomo.com"
+            href="https://www.kooomo.com/"
             rel="noopener noreferrer"
             target="_blank"
           >

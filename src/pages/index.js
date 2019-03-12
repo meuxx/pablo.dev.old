@@ -13,6 +13,7 @@ export default () => (
     <Helmet>
       {/* General tags */}
       <title>{siteMetadata.title}</title>
+      <link rel="canonical" href={siteMetadata.siteUrl} />
       <meta name="description" content={siteMetadata.description} />
       <meta name="image" content={image} />
 
