@@ -37,7 +37,7 @@ export default () => {
           <a href="mailto:contact@pablo.dev">contact@pablo.dev</a>
           <br />
           <br />
-          Back end developer at{' '}
+          Back-end developer at{' '}
           <a
             href="https://kooomo.com"
             rel="noopener noreferrer"

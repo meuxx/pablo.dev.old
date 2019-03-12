@@ -5,36 +5,46 @@ import Layout from '../components/layout'
 import About from '../components/About'
 import Experience from '../components/Experience'
 
-export default () => {
-  const siteTitle = 'Pablo Maceda'
-  const siteDescription = 'Pablo Maceda - Back-end developer - Portfolio'
+import * as config from '../../gatsby-config'
+import image from '../assets/images/open_graph.jpg'
 
-  return (
-    <Layout>
-      <Helmet>
-        <title>{siteTitle}</title>
-        <meta name="description" content={siteDescription} />
-      </Helmet>
+export default () => (
+  <Layout>
+    <Helmet>
+      {/* General tags */}
+      <title>{config.siteMetadata.title}</title>
+      <meta name="description" content={config.siteMetadata.description} />
+      <meta name="image" content={image} />
 
-      <div id="main">
-        <About />
+      {/* OpenGraph tags */}
+      <meta property="og:url" content={config.siteMetadata.siteUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={config.siteMetadata.title} />
+      <meta
+        property="og:description"
+        content={config.siteMetadata.description}
+      />
+      <meta property="og:image" content={image} />
+    </Helmet>
 
-        <Experience />
+    <div id="main">
+      <About />
 
-        <ul className="copyright">
-          <li>&copy; Gatsby Starter Strata</li>
-          <li>
-            Design:{' '}
-            <a
-              href="https://html5up.net"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              HTML5 UP
-            </a>
-          </li>
-        </ul>
-      </div>
-    </Layout>
-  )
-}
+      <Experience />
+
+      <ul className="copyright">
+        <li>&copy; Gatsby Starter Strata</li>
+        <li>
+          Design:{' '}
+          <a
+            href="https://html5up.net"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            HTML5 UP
+          </a>
+        </li>
+      </ul>
+    </div>
+  </Layout>
+)
