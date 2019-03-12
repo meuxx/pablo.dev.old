@@ -34,10 +34,10 @@ export default () => {
         />
         <h1>
           <strong>Pablo Maceda</strong>
-          <br />
-          <a href="mailto:contact@pablo.dev">contact@pablo.dev</a>
-          <br />
-          <br />
+          <br /> <a href="mailto:contact@pablo.dev">contact@pablo.dev</a>
+        </h1>
+        <br />
+        <h1>
           Back-end developer at{' '}
           <a
             href="https://www.kooomo.com/"
@@ -46,8 +46,7 @@ export default () => {
           >
             kooomo.com
           </a>
-          <br />
-          London, UK
+          <br /> London, UK
         </h1>
       </div>
       <Footer />
