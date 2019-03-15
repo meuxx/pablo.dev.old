@@ -1,0 +1,15 @@
+[build]
+  command = "gatsby build"
+  publish = "public/"
+
+[[redirects]]
+  from = "https://www.pablo.dev/*"
+  to = "https://pablo.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://pablo-dev.netlify.com/*"
+  to = " https://pablo.dev/:splat"
+  status = 301
+  force = true
