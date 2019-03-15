@@ -22,6 +22,11 @@ const schemaOrgJSONLD = {
     addressCountry: 'GB',
     addressRegion: 'London',
   },
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Kooomo',
+    url: 'https://www.kooomo.com',
+  },
 }
 
 export default () => (
