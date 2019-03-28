@@ -12,6 +12,8 @@ export default () => (
         <br />{' '}
         <a
           href="mailto:contact@pablo.dev"
+          rel="noopener noreferrer"
+          target="_blank"
           aria-label="Contact email"
           title="Contact email"
         >

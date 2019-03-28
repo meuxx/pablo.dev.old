@@ -8,6 +8,8 @@ export default () => (
           <a
             href="mailto:contact@pablo.dev"
             className="icon fa-envelope-o"
+            rel="noopener noreferrer"
+            target="_blank"
             aria-label="Email"
             title="Email"
           >
