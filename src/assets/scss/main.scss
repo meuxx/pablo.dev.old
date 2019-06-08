@@ -1,7 +1,6 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
-@import '../css/font-awesome.min.css';
 
 /*
 	Strata by HTML5 UP
@@ -599,9 +598,7 @@
 				}
 
 				.icon {
-					&:before {
-						font-size: 1.5em;
-					}
+					font-size: 1.5em;
 				}
 			}
 		}
