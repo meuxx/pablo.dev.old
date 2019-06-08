@@ -11,7 +11,7 @@ const query = graphql`
         fluid(
           maxWidth: 200
           quality: 85
-          traceSVG: { background: "#7baacc", color: "#080a0e", threshold: 70 }
+          traceSVG: { background: "#033E6B", color: "#080a0e", threshold: 70 }
         ) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
