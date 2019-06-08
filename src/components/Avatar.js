@@ -2,6 +2,7 @@ import React from 'react'
 
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
 
 const query = graphql`
   query {
@@ -19,7 +20,7 @@ const query = graphql`
   }
 `
 
-export default ({ className }) => (
+const Avatar = ({ className }) => (
   <StaticQuery
     query={query}
     render={data => (
@@ -27,3 +28,9 @@ export default ({ className }) => (
     )}
   />
 )
+
+Avatar.propTypes = {
+  className: PropTypes.string.isRequired,
+}
+
+export default Avatar

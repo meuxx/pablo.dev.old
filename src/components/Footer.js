@@ -1,7 +1,7 @@
 import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default () => (
+const Footer = () => (
   <footer id="footer">
     <div className="inner">
       <ul className="icons">
@@ -14,7 +14,7 @@ export default () => (
             aria-label="Email"
             title="Email"
           >
-            <FontAwesomeIcon icon={["far", "envelope"]} />
+            <FontAwesomeIcon icon={['far', 'envelope']} />
             <span className="label">Email</span>
           </a>
         </li>
@@ -27,7 +27,7 @@ export default () => (
             aria-label="GitLab"
             title="GitLab"
           >
-            <FontAwesomeIcon icon={["fab", "gitlab"]} />
+            <FontAwesomeIcon icon={['fab', 'gitlab']} />
             <span className="label">GitLab</span>
           </a>
         </li>
@@ -40,7 +40,7 @@ export default () => (
             aria-label="GitHub"
             title="GitHub"
           >
-            <FontAwesomeIcon icon={["fab", "github"]} />
+            <FontAwesomeIcon icon={['fab', 'github']} />
             <span className="label">GitHub</span>
           </a>
         </li>
@@ -48,3 +48,5 @@ export default () => (
     </div>
   </footer>
 )
+
+export default Footer

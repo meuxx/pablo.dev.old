@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default () => (
+const Experience = () => (
   <section id="two">
     <header>
       <h2>Experience</h2>
@@ -19,3 +19,5 @@ export default () => (
     </p>
   </section>
 )
+
+export default Experience

@@ -3,7 +3,7 @@ import React from 'react'
 import Footer from './Footer'
 import Avatar from './Avatar'
 
-export default () => (
+const Header = () => (
   <header id="header">
     <div className="inner">
       <Avatar className="image avatar" />
@@ -37,3 +37,5 @@ export default () => (
     <Footer />
   </header>
 )
+
+export default Header

@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 
-export default () => (
+const NotFound = () => (
   <Layout>
     <div id="main">
       <Helmet>
@@ -15,3 +15,5 @@ export default () => (
     </div>
   </Layout>
 )
+
+export default NotFound

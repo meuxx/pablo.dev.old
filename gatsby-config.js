@@ -54,9 +54,7 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
-          "/sw.js": [
-            "Cache-Control: no-cache",
-          ],
+          '/sw.js': ['Cache-Control: no-cache'],
         }, // option to add more headers. `Link` headers are transformed by the below criteria
       },
     },

@@ -29,7 +29,7 @@ const schemaOrgJSONLD = {
   },
 }
 
-export default () => (
+const index = () => (
   <Layout>
     <Helmet>
       {/* General tags */}
@@ -80,3 +80,5 @@ export default () => (
     </main>
   </Layout>
 )
+
+export default index
