@@ -58,5 +58,15 @@ module.exports = {
         }, // option to add more headers. `Link` headers are transformed by the below criteria
       },
     },
+    {
+      resolve: `gatsby-plugin-csp`,
+      options: {
+        mergeDefaultDirectives: true,
+        mergeStyleHashes: false,
+        directives: {
+          'style-src': "'self' 'unsafe-inline'",
+        },
+      },
+    },
   ],
 }
