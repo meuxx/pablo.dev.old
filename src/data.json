@@ -1,0 +1,17 @@
+{
+  "site": {
+    "title": "Pablo Maceda | Back-end developer in London, UK",
+    "description": "I'm Pablo Maceda, back-end developer offering 5 years of experience, with a solid background as PHP developer and a broad technical skill set",
+    "author": "Pablo Maceda",
+    "siteUrl": "https://pablo.dev"
+  },
+  "author": {
+    "jobTitle": "Back-end developer",
+    "email": "contact@pablo.dev",
+    "social": ["https://gitlab.com/meuxx", "https://github.com/meuxx"],
+    "country": "GB",
+    "city": "London",
+    "organizationName": "Kooomo",
+    "organizationUrl": "https://www.kooomo.com"
+  }
+}

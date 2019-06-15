@@ -1,9 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
-const NotFound = () => (
+const NotFound: React.SFC = () => (
   <Layout>
     <div id="main">
       <Helmet>

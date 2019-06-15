@@ -9,6 +9,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/free-regular-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "@types/react-helmet": "^5.0.8",
     "gatsby": "^2.9.4",
     "gatsby-cli": "^2.6.7",
     "gatsby-image": "^2.1.4",
@@ -27,11 +28,11 @@
     "gatsby-transformer-sharp": "^2.1.21",
     "graphql": "^14.3.1",
     "node-sass": "^4.12.0",
-    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-images": "^1.0.0"
+    "react-images": "^1.0.0",
+    "schema-dts": "^0.4.1"
   },
   "keywords": [
     "gatsby"
@@ -41,18 +42,23 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --write '**/*.js' '**/*.json' '.eslintrc' --ignore-path '.gitignore'",
-    "lint": "./node_modules/.bin/eslint src",
+    "format": "./node_modules/.bin/prettier --write '**/*.js' '**/*.tsx' '**/*.json' --ignore-path '.gitignore'",
+    "lint": "./node_modules/.bin/eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+    "type-check": "./node_modules/.bin/tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
-    "eslint-config-airbnb": "^17.1.0",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.13.0"
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "gatsby-plugin-typescript": "^2.0.15",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.2"
   },
   "repository": {
     "type": "git",

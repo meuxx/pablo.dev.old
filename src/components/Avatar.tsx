@@ -1,8 +1,7 @@
 import React from 'react'
 
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import PropTypes from 'prop-types'
 
 const query = graphql`
   query {
@@ -19,18 +18,14 @@ const query = graphql`
     }
   }
 `
+interface AvatarProps {
+  className: string
+}
 
-const Avatar = ({ className }) => (
-  <StaticQuery
-    query={query}
-    render={data => (
-      <Img className={className} fluid={data.file.childImageSharp.fluid} />
-    )}
-  />
-)
+const Avatar: React.SFC<AvatarProps> = ({ className }) => {
+  const data = useStaticQuery(query)
 
-Avatar.propTypes = {
-  className: PropTypes.string.isRequired,
+  return <Img className={className} fluid={data.file.childImageSharp.fluid} />
 }
 
 export default Avatar

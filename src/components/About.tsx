@@ -1,14 +1,14 @@
 import React from 'react'
 
-const About = () => (
+const About: React.SFC = () => (
   <section id="one">
     <header>
       <h2>About me</h2>
     </header>
     <p>
-      I'm <strong>Pablo Maceda</strong>, back-end developer offering 5 years of
-      experience, with a solid background as PHP developer and a broad technical
-      skill set. I have a passion for good design, clean code and good
+      I&apos;m <strong>Pablo Maceda</strong>, back-end developer offering 5
+      years of experience, with a solid background as PHP developer and a broad
+      technical skill set. I have a passion for good design, clean code and good
       performance.
     </p>
     <p>

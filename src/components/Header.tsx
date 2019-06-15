@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Footer from './Footer'
 import Avatar from './Avatar'
+import Footer from './Footer'
 
-const Header = () => (
+const Header: React.SFC = () => (
   <header id="header">
     <div className="inner">
       <Avatar className="image avatar" />

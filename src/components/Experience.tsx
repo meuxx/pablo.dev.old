@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Experience = () => (
+const Experience: React.SFC = () => (
   <section id="two">
     <header>
       <h2>Experience</h2>
