@@ -2,7 +2,7 @@ import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Footer: React.SFC = () => (
+const Footer: React.FC = () => (
   <footer id="footer">
     <div className="inner">
       <ul className="icons">

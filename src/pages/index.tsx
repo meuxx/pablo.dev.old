@@ -9,7 +9,7 @@ import { Person } from 'schema-dts'
 import image from '../assets/images/open_graph.jpg'
 import data from '../data.json'
 
-const index: React.SFC = () => {
+const index: React.FC = () => {
   const { site, author } = data
 
   const schemaOrgJSONLD: Person = {

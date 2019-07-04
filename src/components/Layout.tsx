@@ -9,7 +9,7 @@ import Header from './Header'
 
 library.add(fab, faEnvelope)
 
-const Layout: React.SFC = ({ children }) => (
+const Layout: React.FC = ({ children }) => (
   <div>
     <Header />
     {children}

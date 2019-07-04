@@ -1,6 +1,6 @@
 import React from 'react'
 
-const About: React.SFC = () => (
+const About: React.FC = () => (
   <section id="one">
     <header>
       <h2>About me</h2>

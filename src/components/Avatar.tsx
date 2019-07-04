@@ -18,14 +18,13 @@ const query = graphql`
     }
   }
 `
-interface AvatarProps {
-  className: string
-}
 
-const Avatar: React.SFC<AvatarProps> = ({ className }) => {
+const Avatar: React.FC = () => {
   const data = useStaticQuery(query)
 
-  return <Img className={className} fluid={data.file.childImageSharp.fluid} />
+  return (
+    <Img className="image avatar" fluid={data.file.childImageSharp.fluid} />
+  )
 }
 
 export default Avatar

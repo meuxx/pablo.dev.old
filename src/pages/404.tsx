@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'
 
-const NotFound: React.SFC = () => (
+const NotFound: React.FC = () => (
   <Layout>
     <div id="main">
       <Helmet>

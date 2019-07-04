@@ -3,10 +3,10 @@ import React from 'react'
 import Avatar from './Avatar'
 import Footer from './Footer'
 
-const Header: React.SFC = () => (
+const Header: React.FC = () => (
   <header id="header">
     <div className="inner">
-      <Avatar className="image avatar" />
+      <Avatar />
       <h1>
         <strong>Pablo Maceda</strong>
         <br />{' '}
