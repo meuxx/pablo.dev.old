@@ -3,20 +3,15 @@ const data = require('./src/data.json')
 module.exports = {
   siteMetadata: data.site,
   plugins: [
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'pablo.dev',
-        short_name: 'pablo.dev',
-        start_url: '/',
-        background_color: '#101010',
-        theme_color: '#033e6b',
-        display: 'minimal-ui',
-        icon: 'src/assets/images/icon.png', // This path is relative to the root of the site.
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-plugin-sass',
+    `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
@@ -24,15 +19,8 @@ module.exports = {
         dir: 'ltr',
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/assets/images`,
-        name: 'images',
-      },
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -44,16 +32,30 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-robots-txt',
-    'gatsby-plugin-offline',
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'pablo.dev',
+        short_name: 'pablo.dev',
+        start_url: '/',
+        background_color: '#101010',
+        theme_color: '#033e6b',
+        display: 'minimal-ui',
+        icon: 'src/images/icon.png', // This path is relative to the root of the site.
+      },
+    },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          '/sw.js': ['Cache-Control: no-cache'],
-        }, // option to add more headers. `Link` headers are transformed by the below criteria
-      },
+      // options: {
+      //   headers: {
+      //     '/sw.js': ['Cache-Control: no-cache'],
+      //   }, // option to add more headers. `Link` headers are transformed by the below criteria
+      // },
     },
     {
       resolve: `gatsby-plugin-csp`,
@@ -65,6 +67,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-typescript',
+    `gatsby-plugin-typescript`,
   ],
 }

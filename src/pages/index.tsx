@@ -1,12 +1,12 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 import About from '../components/About'
 import Experience from '../components/Experience'
 import Layout from '../components/Layout'
 
 import { Person } from 'schema-dts'
-import image from '../assets/images/open_graph.jpg'
+import image from '../images/open_graph.jpg'
 import data from '../data.json'
 
 const index: React.FC = () => {
