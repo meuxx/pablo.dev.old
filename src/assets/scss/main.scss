@@ -450,7 +450,7 @@
 
 		&:before {
 			@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
-			background: url('../images/background.png');
+			background: url('../../images/background.png');
 			border-radius: _size(border-radius);
 			content: '';
 			display: block;
@@ -492,7 +492,7 @@
 				}
 
 				&:before {
-					background: url('../images/background.png');
+					background: url('../../images/background.png');
 					opacity: 1.0;
 				}
 			}
@@ -900,7 +900,7 @@
 		@include vendor('justify-content', 'space-between');
 		background-color:		_palette(accent2, bg);
 		background-attachment:	scroll,								fixed;
-		background-image:		url('../images/background.png');
+		background-image:		url('../../images/background.png');
 		// background-position:	top left,							top left;
 		background-repeat:		repeat;
 		// background-size:		auto,								auto 100%;
