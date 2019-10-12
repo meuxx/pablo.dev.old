@@ -1,7 +1,7 @@
 name: CI
 on: [pull_request]
 jobs:
-  build_and_tes:
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -12,6 +12,6 @@ jobs:
       - name: yarn install, and test
         run: |
           yarn
-          yarn test
+          yarn test:ci
         env:
           CI: true
