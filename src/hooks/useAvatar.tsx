@@ -1,15 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import { FluidObject } from 'gatsby-image'
 
-interface AvatarInterface {
-  file: {
-    childImageSharp: {
-      fluid: FluidObject
-    }
-  }
-}
-
-const useAvatar = (): AvatarInterface => {
+const useAvatar = (): FluidObject | null => {
   const query = graphql`
     query {
       file(relativePath: { eq: "avatar.jpg" }) {
@@ -26,7 +18,12 @@ const useAvatar = (): AvatarInterface => {
     }
   `
 
-  return useStaticQuery(query)
+  const data = useStaticQuery(query)
+  if (!data) {
+    return null
+  }
+
+  return data.file.childImageSharp.fluid
 }
 
 export default useAvatar

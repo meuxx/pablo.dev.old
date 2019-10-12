@@ -4,11 +4,9 @@ import useAvatar from '../hooks/useAvatar'
 import Img from 'gatsby-image'
 
 const Avatar: React.FC = () => {
-  const avatar = useAvatar()
+  const src = useAvatar()
 
-  return (
-    <Img className="image avatar" fluid={avatar.file.childImageSharp.fluid} />
-  )
+  return src && <Img className="image avatar" fluid={src} />
 }
 
 export default Avatar
