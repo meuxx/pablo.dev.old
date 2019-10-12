@@ -11,7 +11,7 @@ jobs:
           node-version: '12.x'
       - name: yarn install, and test
         run: |
-          yarn
+          yarn install --frozen-lockfile
           yarn test:ci
         env:
           CI: true
