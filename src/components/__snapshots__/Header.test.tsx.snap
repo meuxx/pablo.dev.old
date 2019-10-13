@@ -1,15 +1,188 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders without crashing 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #033E6B;
+  background-attachment: scroll,fixed;
+  background-image: url(test-file-stub);
+  background-repeat: repeat;
+  color: rgba(255,255,255,0.5);
+  height: 100%;
+  left: 0;
+  padding: 4em 2em;
+  position: fixed;
+  text-align: right;
+  top: 0;
+  width: 24%;
+}
+
+.c0 > * {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 0 0 1em 0;
+}
+
+.c2 {
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+  font-size: 1.35em;
+  line-height: 1.75em;
+  margin: 0;
+}
+
+.c2 strong {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.c4 {
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+  font-size: 1.35em;
+  line-height: 1.75em;
+  margin: 0;
+}
+
+.c4 strong {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.c3 {
+  -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  border-bottom: dotted 1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0B61A4;
+  color: inherit;
+}
+
+.c3:hover {
+  border-bottom-color: transparent;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media screen and (max-width:1280px) {
+  .c0 {
+    padding: 6em 3em 3em 3em;
+    width: 30%;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .c0 {
+    background-attachment: scroll;
+    background-position: top left,center center;
+    background-size: auto,cover;
+    left: auto;
+    padding: 6em 4em;
+    position: relative;
+    text-align: center;
+    top: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+  }
+}
+
+@media screen and (max-width:736px) {
+  .c0 {
+    padding: 2.25em 1.5em;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .c0 {
+    padding: 4.5em 1.5em;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .c2 {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .c2 {
+    font-size: 1.75em;
+  }
+}
+
+@media screen and (max-width:736px) {
+  .c2 {
+    font-size: 1.35em;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .c4 {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .c4 {
+    font-size: 1.75em;
+  }
+}
+
+@media screen and (max-width:736px) {
+  .c4 {
+    font-size: 1.35em;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .c4 {
+    font-size: 1.35em;
+  }
+}
+
+@media screen and (max-width:736px) {
+  .c4 {
+    font-size: 1.35em;
+  }
+}
+
 <div>
   <header
-    id="header"
+    class="c0"
   >
     <div
-      class="inner"
+      class="c1"
     >
       <div />
-      <h1>
+      <h1
+        class="c2"
+      >
         <strong>
           Pablo Maceda
         </strong>
@@ -17,6 +190,7 @@ exports[`Header renders without crashing 1`] = `
          
         <a
           aria-label="Contact email"
+          class="c3"
           href="mailto:contact@pablo.dev"
           rel="noopener noreferrer"
           target="_blank"
@@ -26,10 +200,13 @@ exports[`Header renders without crashing 1`] = `
         </a>
       </h1>
       <br />
-      <h2>
+      <h2
+        class="c4"
+      >
         Back-end developer at
          
         <a
+          class="c3"
           href="https://www.kooomo.com/"
           rel="noopener noreferrer"
           target="_blank"

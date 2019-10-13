@@ -1,10 +1,11 @@
 import React from 'react'
+import { Section, SectionHeader, Button } from '../styles/styles'
 
 const About: React.FC = () => (
-  <section id="one">
-    <header>
+  <Section>
+    <SectionHeader>
       <h2>About me</h2>
-    </header>
+    </SectionHeader>
     <p>
       I&apos;m <strong>Pablo Maceda</strong>, back-end developer offering 5
       years of experience, with a solid background as PHP developer and a broad
@@ -16,21 +17,17 @@ const About: React.FC = () => (
       technologies.
     </p>
 
-    <ul className="actions">
-      <li>
-        <a
-          href="https://cv.pablo.dev"
-          className="button"
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label="Curriculum Vitae"
-          title="Curriculum Vitae"
-        >
-          View CV
-        </a>
-      </li>
-    </ul>
-  </section>
+    <Button
+      href="https://cv.pablo.dev"
+      className="button"
+      rel="noopener noreferrer"
+      target="_blank"
+      aria-label="Curriculum Vitae"
+      title="Curriculum Vitae"
+    >
+      View CV
+    </Button>
+  </Section>
 )
 
 export default About

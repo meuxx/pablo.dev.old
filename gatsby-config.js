@@ -11,7 +11,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        pure: true,
+        fileName: false,
+        displayName: process.env.NODE_ENV !== 'production',
+      },
+    },
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {

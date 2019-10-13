@@ -1,9 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar renders without crashing 1`] = `
+.c0 {
+  border: 0;
+  display: inline-block;
+  position: relative;
+  border-radius: 100%;
+  margin: 0 0 1em 0;
+  width: 8em;
+}
+
+.c0:before {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  background: url(test-file-stub);
+  border-radius: 0.35em;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c0:before {
+  display: none;
+}
+
+.c0 img {
+  border-radius: 100%;
+  width: 100%;
+}
+
 <div>
   <div
-    class="image avatar gatsby-image-wrapper"
+    class="c0 image avatar gatsby-image-wrapper"
     style="position: relative; overflow: hidden;"
   >
     <div

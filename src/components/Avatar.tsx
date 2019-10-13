@@ -1,7 +1,6 @@
 import React from 'react'
-
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { Avatar as AvatarImg } from '../styles/styles'
 
 const query = graphql`
   query {
@@ -23,7 +22,10 @@ const Avatar: React.FC = () => {
   const avatar = useStaticQuery(query)
 
   return (
-    <Img className="image avatar" fluid={avatar.file.childImageSharp.fluid} />
+    <AvatarImg
+      className="image avatar"
+      fluid={avatar.file.childImageSharp.fluid}
+    />
   )
 }
 

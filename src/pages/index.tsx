@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import About from '../components/About'
 import Experience from '../components/Experience'
 import Layout from '../components/Layout'
+import { Main } from '../styles/styles'
 
 import { Person } from 'schema-dts'
 import image from '../images/open_graph.jpg'
@@ -61,26 +62,10 @@ const index: React.FC = () => {
         <meta name="twitter:image" content={`${site.siteUrl}${image}`} />
       </Helmet>
 
-      <main id="main">
+      <Main>
         <About />
-
         <Experience />
-
-        <ul className="copyright">
-          <li>&copy; Gatsby Starter Strata</li>
-          <li>
-            Design:{' '}
-            <a
-              href="https://html5up.net"
-              rel="noopener noreferrer"
-              target="_blank"
-              title="HTML5 UP"
-            >
-              HTML5 UP
-            </a>
-          </li>
-        </ul>
-      </main>
+      </Main>
     </Layout>
   )
 }

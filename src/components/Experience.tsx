@@ -1,13 +1,14 @@
 import React from 'react'
+import { Section, SectionHeader } from '../styles/styles'
 
 const Experience: React.FC = () => (
-  <section id="two">
-    <header>
+  <Section>
+    <SectionHeader>
       <h2>Experience</h2>
       <h3>
         Kooomo (Dublin, Ireland) <strong>April 2014 – Present</strong>
       </h3>
-    </header>
+    </SectionHeader>
     <p>
       Developed and supported the ecommerce platform with special focus on
       performance improvements and the implementation of new technologies to
@@ -17,7 +18,7 @@ const Experience: React.FC = () => (
       Responsible of the code reviews and the deployments. I was also
       responsible for the training / mentoring of the new employees.
     </p>
-  </section>
+  </Section>
 )
 
 export default Experience

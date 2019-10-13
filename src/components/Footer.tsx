@@ -1,53 +1,54 @@
 import React from 'react'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import {
+  SidebarFooter,
+  SidebarIconWrapper,
+  SidebarIcon,
+  SidebarIconLink,
+} from '../styles/styles'
+
 const Footer: React.FC = () => (
-  <footer id="footer">
-    <div className="inner">
-      <ul className="icons">
-        <li>
-          <a
-            href="mailto:contact@pablo.dev"
-            className="icon"
-            rel="noopener noreferrer"
-            target="_blank"
-            aria-label="Email"
-            title="Email"
-          >
-            <FontAwesomeIcon icon={['far', 'envelope']} />
-            <span className="label">Email</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://gitlab.com/meuxx"
-            className="icon"
-            rel="noopener noreferrer"
-            target="_blank"
-            aria-label="GitLab"
-            title="GitLab"
-          >
-            <FontAwesomeIcon icon={['fab', 'gitlab']} />
-            <span className="label">GitLab</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/meuxx"
-            className="icon"
-            rel="noopener noreferrer"
-            target="_blank"
-            aria-label="GitHub"
-            title="GitHub"
-          >
-            <FontAwesomeIcon icon={['fab', 'github']} />
-            <span className="label">GitHub</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
+  <SidebarFooter>
+    <SidebarIconWrapper>
+      <SidebarIcon>
+        <SidebarIconLink
+          href="mailto:contact@pablo.dev"
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+        >
+          <FontAwesomeIcon icon={['far', 'envelope']} />
+          <span>Email</span>
+        </SidebarIconLink>
+      </SidebarIcon>
+      <SidebarIcon>
+        <SidebarIconLink
+          href="https://gitlab.com/meuxx"
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label="GitLab"
+          title="GitLab"
+        >
+          <FontAwesomeIcon icon={['fab', 'gitlab']} />
+          <span>GitLab</span>
+        </SidebarIconLink>
+      </SidebarIcon>
+      <SidebarIcon>
+        <SidebarIconLink
+          href="https://github.com/meuxx"
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label="GitHub"
+          title="GitHub"
+        >
+          <FontAwesomeIcon icon={['fab', 'github']} />
+          <span>GitHub</span>
+        </SidebarIconLink>
+      </SidebarIcon>
+    </SidebarIconWrapper>
+  </SidebarFooter>
 )
 
 export default Footer

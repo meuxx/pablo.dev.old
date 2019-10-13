@@ -1,11 +1,112 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`About renders without crashing 1`] = `
+.c0 {
+  margin: 2em 0 0 0;
+  padding: 2em 0 0 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.c0 p {
+  color: #b2b2b2;
+  position: relative;
+  margin: 0 0 2em 0;
+}
+
+.c0 p strong {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3 {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.c1 h1 {
+  margin: 0 0 1em;
+  line-height: 1.5em;
+}
+
+.c1 h2 {
+  margin: 0 0 1em;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.c1 h3 {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+.c1 h3 strong {
+  color: #0B61A4;
+  font-weight: 400;
+  float: right;
+}
+
+.c2 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,border-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,border-color 0.2s ease-in-out;
+  background-color: transparent;
+  border-radius: 0.35em;
+  border: solid 3px #0B61A4;
+  color: #0B61A4;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  height: 3.15em;
+  height: calc(2.75em + 6px);
+  line-height: 2.75em;
+  min-width: 10em;
+  padding: 0 1.5em;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.c2:hover {
+  background-color: rgba(3,62,107,0.1);
+}
+
+.c2:active {
+  background-color: rgba(11,97,164,0.1);
+}
+
+@media screen and (max-width:736px) {
+  .c0 {
+    margin: 1.5em 0 0 0;
+    padding: 1.5em 0 0 0;
+  }
+}
+
+@media screen and (max-width:736px) {
+  .c1 h2 {
+    font-size: 1.2em;
+  }
+
+  .c1 h3 {
+    font-size: 1em;
+  }
+}
+
 <div>
   <section
-    id="one"
+    class="c0"
   >
-    <header>
+    <header
+      class="c1"
+    >
       <h2>
         About me
       </h2>
@@ -20,22 +121,16 @@ exports[`About renders without crashing 1`] = `
     <p>
       As a self-taught developer, I always enjoy learning new tools and technologies.
     </p>
-    <ul
-      class="actions"
+    <a
+      aria-label="Curriculum Vitae"
+      class="c2 button"
+      href="https://cv.pablo.dev"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Curriculum Vitae"
     >
-      <li>
-        <a
-          aria-label="Curriculum Vitae"
-          class="button"
-          href="https://cv.pablo.dev"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="Curriculum Vitae"
-        >
-          View CV
-        </a>
-      </li>
-    </ul>
+      View CV
+    </a>
   </section>
 </div>
 `;

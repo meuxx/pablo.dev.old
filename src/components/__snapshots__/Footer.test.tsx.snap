@@ -1,75 +1,124 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer renders without crashing 1`] = `
+.c0 {
+  bottom: auto;
+  left: auto;
+  position: relative;
+  width: 100%;
+}
+
+.c1 {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.c2 {
+  display: inline-block;
+  padding: 0 1em 0 0;
+}
+
+.c2:last-child {
+  padding-right: 0;
+}
+
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.5em;
+  border-bottom: none;
+  position: relative;
+  color: rgba(255,255,255,0.4);
+}
+
+.c3 > span {
+  display: none;
+}
+
+@media screen and (max-width:980px) {
+  .c0 {
+    bottom: auto;
+    left: auto;
+    padding: 4em 4em 6em 4em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .c1 {
+    margin: 0 0 1em 0;
+  }
+}
+
 <div>
   <footer
-    id="footer"
+    class="c0"
   >
-    <div
-      class="inner"
+    <ul
+      class="c1"
     >
-      <ul
-        class="icons"
+      <li
+        class="c2"
       >
-        <li>
-          <a
-            aria-label="Email"
-            class="icon"
-            href="mailto:contact@pablo.dev"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Email"
-          >
-            <svg
-              class="far-envelope"
-            />
-            <span
-              class="label"
-            >
-              Email
-            </span>
-          </a>
-        </li>
-        <li>
-          <a
-            aria-label="GitLab"
-            class="icon"
-            href="https://gitlab.com/meuxx"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="GitLab"
-          >
-            <svg
-              class="fab-gitlab"
-            />
-            <span
-              class="label"
-            >
-              GitLab
-            </span>
-          </a>
-        </li>
-        <li>
-          <a
-            aria-label="GitHub"
-            class="icon"
-            href="https://github.com/meuxx"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="GitHub"
-          >
-            <svg
-              class="fab-github"
-            />
-            <span
-              class="label"
-            >
-              GitHub
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
+        <a
+          aria-label="Email"
+          class="c3"
+          href="mailto:contact@pablo.dev"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Email"
+        >
+          <svg
+            class="far-envelope"
+          />
+          <span>
+            Email
+          </span>
+        </a>
+      </li>
+      <li
+        class="c2"
+      >
+        <a
+          aria-label="GitLab"
+          class="c3"
+          href="https://gitlab.com/meuxx"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="GitLab"
+        >
+          <svg
+            class="fab-gitlab"
+          />
+          <span>
+            GitLab
+          </span>
+        </a>
+      </li>
+      <li
+        class="c2"
+      >
+        <a
+          aria-label="GitHub"
+          class="c3"
+          href="https://github.com/meuxx"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="GitHub"
+        >
+          <svg
+            class="fab-github"
+          />
+          <span>
+            GitHub
+          </span>
+        </a>
+      </li>
+    </ul>
   </footer>
 </div>
 `;

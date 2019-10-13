@@ -1,11 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Experience renders without crashing 1`] = `
+.c0 {
+  margin: 2em 0 0 0;
+  padding: 2em 0 0 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.c0 p {
+  color: #b2b2b2;
+  position: relative;
+  margin: 0 0 2em 0;
+}
+
+.c0 p strong {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3 {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.c1 h1 {
+  margin: 0 0 1em;
+  line-height: 1.5em;
+}
+
+.c1 h2 {
+  margin: 0 0 1em;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.c1 h3 {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+.c1 h3 strong {
+  color: #0B61A4;
+  font-weight: 400;
+  float: right;
+}
+
+@media screen and (max-width:736px) {
+  .c0 {
+    margin: 1.5em 0 0 0;
+    padding: 1.5em 0 0 0;
+  }
+}
+
+@media screen and (max-width:736px) {
+  .c1 h2 {
+    font-size: 1.2em;
+  }
+
+  .c1 h3 {
+    font-size: 1em;
+  }
+}
+
 <div>
   <section
-    id="two"
+    class="c0"
   >
-    <header>
+    <header
+      class="c1"
+    >
       <h2>
         Experience
       </h2>

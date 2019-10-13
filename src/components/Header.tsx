@@ -2,15 +2,23 @@ import React from 'react'
 
 import Avatar from './Avatar'
 import Footer from './Footer'
+import {
+  Sidebar,
+  SidebarMain,
+  SidebarTitle,
+  SidebarSubtitle,
+  SidebarLink,
+} from '../styles/styles'
 
 const Header: React.FC = () => (
-  <header id="header">
-    <div className="inner">
+  <Sidebar>
+    <SidebarMain>
       <Avatar />
-      <h1>
+
+      <SidebarTitle>
         <strong>Pablo Maceda</strong>
         <br />{' '}
-        <a
+        <SidebarLink
           href="mailto:contact@pablo.dev"
           rel="noopener noreferrer"
           target="_blank"
@@ -18,24 +26,27 @@ const Header: React.FC = () => (
           title="Contact email"
         >
           contact@pablo.dev
-        </a>
-      </h1>
+        </SidebarLink>
+      </SidebarTitle>
+
       <br />
-      <h2>
+
+      <SidebarSubtitle>
         Back-end developer at{' '}
-        <a
+        <SidebarLink
           href="https://www.kooomo.com/"
           rel="noopener noreferrer"
           target="_blank"
           title="Kooomo"
         >
           kooomo.com
-        </a>
+        </SidebarLink>
         <br /> London, UK
-      </h2>
-    </div>
+      </SidebarSubtitle>
+    </SidebarMain>
+
     <Footer />
-  </header>
+  </Sidebar>
 )
 
 export default Header
