@@ -2,13 +2,7 @@ import React from 'react'
 
 import Avatar from './Avatar'
 import Footer from './Footer'
-import {
-  Sidebar,
-  SidebarMain,
-  SidebarTitle,
-  SidebarSubtitle,
-  SidebarLink,
-} from '../styles/styles'
+import { Sidebar, SidebarMain, SidebarTitle, SidebarSubtitle, SidebarLink } from '../styles/styles'
 
 const Header: React.FC = () => (
   <Sidebar>
@@ -33,12 +27,7 @@ const Header: React.FC = () => (
 
       <SidebarSubtitle>
         Back-end developer at{' '}
-        <SidebarLink
-          href="https://www.kooomo.com/"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="Kooomo"
-        >
+        <SidebarLink href="https://www.kooomo.com/" rel="noopener noreferrer" target="_blank" title="Kooomo">
           kooomo.com
         </SidebarLink>
         <br /> London, UK

@@ -10,15 +10,13 @@ const headerPad = size.header.padding
 const Main = styled.main`
   margin-left: ${headerWidth.default};
   max-width: ${math(`50em + ${headerPad.default}`)};
-  padding: ${math(`${headerPad.default} * 2`)} ${headerPad.default} 0
-    ${headerPad.default};
+  padding: ${math(`${headerPad.default} * 2`)} ${headerPad.default} 0 ${headerPad.default};
   width: calc(100% - ${headerWidth.default});
 
   @media screen and ${breakpoints.large} {
     margin-left: ${headerWidth.large};
     max-width: none;
-    padding: ${math(`${headerPad.large} * 2`)} ${headerPad.large}
-      ${headerPad.large} ${headerPad.large};
+    padding: ${math(`${headerPad.large} * 2`)} ${headerPad.large} ${headerPad.large} ${headerPad.large};
     width: calc(100% - ${headerWidth.large});
   }
 
@@ -30,14 +28,12 @@ const Main = styled.main`
 
   @media screen and ${breakpoints.small} {
     padding: ${math(`${headerPad.small} * 1.5`)} ${headerPad.small}
-      ${math(`(${headerPad.small} * 1.5) - ${size.elementMargin}`)}
-      ${headerPad.small};
+      ${math(`(${headerPad.small} * 1.5) - ${size.elementMargin}`)} ${headerPad.small};
   }
 `
 
 const Link = styled.a`
-  transition: color ${transition} ease-in-out,
-    border-color ${transition} ease-in-out;
+  transition: color ${transition} ease-in-out, border-color ${transition} ease-in-out;
   border-bottom: dotted 1px;
   text-decoration: none;
   color: ${color.accent1.bg};
@@ -67,8 +63,7 @@ const Sidebar = styled.header`
   }
 
   @media screen and ${breakpoints.large} {
-    padding: ${math(`${headerPad.large} * 2`)} ${headerPad.large}
-      ${headerPad.large} ${headerPad.large};
+    padding: ${math(`${headerPad.large} * 2`)} ${headerPad.large} ${headerPad.large} ${headerPad.large};
     width: ${headerWidth.large};
   }
 
@@ -154,8 +149,7 @@ const SidebarFooter = styled.footer`
   @media screen and ${breakpoints.medium} {
     bottom: auto;
     left: auto;
-    padding: ${headerPad.medium} ${headerPad.medium}
-      ${math(`${headerPad.medium} * 1.5`)} ${headerPad.medium};
+    padding: ${headerPad.medium} ${headerPad.medium} ${math(`${headerPad.medium} * 1.5`)} ${headerPad.medium};
     position: relative;
     text-align: center;
     width: 100%;
@@ -261,8 +255,7 @@ const SectionHeader = styled.header`
 
 const Button = styled.a`
   appearance: none;
-  transition: background-color ${transition} ease-in-out,
-    color ${transition} ease-in-out, border-color 0.2s ease-in-out;
+  transition: background-color ${transition} ease-in-out, color ${transition} ease-in-out, border-color 0.2s ease-in-out;
   background-color: transparent;
   border-radius: ${size.borderRadius};
   border: solid 3px ${color.accent1.bg};

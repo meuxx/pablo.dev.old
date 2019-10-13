@@ -43,9 +43,7 @@ const index: React.FC = () => {
         <meta name="image" content={`${site.siteUrl}${image}`} />
 
         {/* Schema.org tags */}
-        <script type="application/ld+json">
-          {JSON.stringify(schemaOrgJSONLD)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
 
         {/* OpenGraph tags */}
         <meta property="og:url" content={site.siteUrl} />

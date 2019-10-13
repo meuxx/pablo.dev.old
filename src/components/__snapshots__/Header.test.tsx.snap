@@ -73,8 +73,8 @@ exports[`Header renders without crashing 1`] = `
 }
 
 .c3 {
-  -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out,border-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out,border-color 0.2s ease-in-out;
   border-bottom: dotted 1px;
   -webkit-text-decoration: none;
   text-decoration: none;

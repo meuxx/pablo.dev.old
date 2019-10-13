@@ -1,12 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import {
-  SidebarFooter,
-  SidebarIconWrapper,
-  SidebarIcon,
-  SidebarIconLink,
-} from '../styles/styles'
+import { SidebarFooter, SidebarIconWrapper, SidebarIcon, SidebarIconLink } from '../styles/styles'
 
 const Footer: React.FC = () => (
   <SidebarFooter>

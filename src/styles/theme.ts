@@ -3,20 +3,12 @@ const color = {
   fg: '#a2a2a2',
   fgBold: '#ffffff',
   fgLight: '#b2b2b2',
-  border: '#efefef',
-  borderBg: '#f7f7f7',
-  border2: '#dfdfdf',
-  border2Bg: '#e7e7e7',
 
   accent1: {
     bg: '#0B61A4',
     fg: 'mix(#0B61A4, #ffffff, 25%)',
     fgBold: '#ffffff',
     fgLight: 'mix(#0B61A4, #ffffff, 40%)',
-    border: 'rgba(255,255,255,0.25)',
-    borderBg: 'rgba(255,255,255,0.075)',
-    border2: 'rgba(255,255,255,0.5)',
-    border2Bg: 'rgba(255,255,255,0.2)',
   },
 
   accent2: {
@@ -24,16 +16,11 @@ const color = {
     fg: 'rgba(255,255,255,0.5)',
     fgBold: '#ffffff',
     fgLight: 'rgba(255,255,255,0.4)',
-    border: 'rgba(255,255,255,0.25)',
-    borderBg: 'rgba(255,255,255,0.075)',
-    border2: 'rgba(255,255,255,0.5)',
-    border2Bg: 'rgba(255,255,255,0.2)',
   },
 }
 
 const size = {
   borderRadius: '0.35em',
-  elementHeight: '2.75em',
   elementMargin: '2em',
   header: {
     width: {

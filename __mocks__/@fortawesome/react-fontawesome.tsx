@@ -6,9 +6,7 @@ interface IconArgs {
   iconName: string
 }
 
-function normalizeIconArgs(
-  icon: IconArgs | string | string[] | null
-): IconArgs {
+function normalizeIconArgs(icon: IconArgs | string | string[] | null): IconArgs {
   if (Array.isArray(icon)) {
     return { prefix: icon[0], iconName: icon[1] }
   }
