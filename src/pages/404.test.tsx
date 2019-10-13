@@ -1,14 +1,12 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import IndexPage from './index'
+import NotFoundPage from './404'
 
-jest.mock('../components/About', () => 'div')
-jest.mock('../components/Experience', () => 'div')
 jest.mock('../components/Layout', () => 'div')
 
-describe('index', () => {
+describe('404', () => {
   it('renders without crashing', () => {
-    const { container } = render(<IndexPage />)
+    const { container } = render(<NotFoundPage />)
 
     expect(container).toBeDefined()
   })

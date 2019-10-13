@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders without crashing 1`] = `
+<div>
+  <header
+    id="header"
+  >
+    <div
+      class="inner"
+    >
+      <div />
+      <h1>
+        <strong>
+          Pablo Maceda
+        </strong>
+        <br />
+         
+        <a
+          aria-label="Contact email"
+          href="mailto:contact@pablo.dev"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Contact email"
+        >
+          contact@pablo.dev
+        </a>
+      </h1>
+      <br />
+      <h2>
+        Back-end developer at
+         
+        <a
+          href="https://www.kooomo.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Kooomo"
+        >
+          kooomo.com
+        </a>
+        <br />
+         London, UK
+      </h2>
+    </div>
+    <div />
+  </header>
+</div>
+`;

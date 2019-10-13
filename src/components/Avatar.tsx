@@ -1,12 +1,30 @@
 import React from 'react'
 
-import useAvatar from '../hooks/useAvatar'
+import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
-const Avatar: React.FC = () => {
-  const src = useAvatar()
+const query = graphql`
+  query {
+    file(relativePath: { eq: "avatar.jpg" }) {
+      childImageSharp {
+        fluid(
+          maxWidth: 200
+          quality: 85
+          traceSVG: { background: "#033E6B", color: "#080a0e", threshold: 70 }
+        ) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+  }
+`
 
-  return src && <Img className="image avatar" fluid={src} />
+const Avatar: React.FC = () => {
+  const avatar = useStaticQuery(query)
+
+  return (
+    <Img className="image avatar" fluid={avatar.file.childImageSharp.fluid} />
+  )
 }
 
 export default Avatar

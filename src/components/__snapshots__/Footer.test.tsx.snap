@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders without crashing 1`] = `
+<div>
+  <footer
+    id="footer"
+  >
+    <div
+      class="inner"
+    >
+      <ul
+        class="icons"
+      >
+        <li>
+          <a
+            aria-label="Email"
+            class="icon"
+            href="mailto:contact@pablo.dev"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Email"
+          >
+            <svg
+              class="far-envelope"
+            />
+            <span
+              class="label"
+            >
+              Email
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="GitLab"
+            class="icon"
+            href="https://gitlab.com/meuxx"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="GitLab"
+          >
+            <svg
+              class="fab-gitlab"
+            />
+            <span
+              class="label"
+            >
+              GitLab
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="GitHub"
+            class="icon"
+            href="https://github.com/meuxx"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="GitHub"
+          >
+            <svg
+              class="fab-github"
+            />
+            <span
+              class="label"
+            >
+              GitHub
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>
+`;

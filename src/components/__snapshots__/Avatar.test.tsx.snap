@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar renders without crashing 1`] = `
+<div>
+  <div
+    class="image avatar gatsby-image-wrapper"
+    style="position: relative; overflow: hidden;"
+  >
+    <div
+      style="width: 100%; padding-bottom: 100%;"
+    />
+    
+    <picture>
+      <source
+        sizes="(max-width: 200px) 100vw, 200px"
+        srcset="/avatar.webp 50w,
+/avatar.webp 100w,
+/avatar.webp 200w,
+/avatar.webp 300w,
+/avatar.webp 400w,
+/avatar.webp 851w"
+        type="image/webp"
+      />
+      <source
+        sizes="(max-width: 200px) 100vw, 200px"
+        srcset="/avatar.jpg 50w,
+/avatar.jpg 100w,
+/avatar.jpg 200w,
+/avatar.jpg 300w,
+/avatar.jpg 400w,
+/avatar.jpg 851w"
+      />
+      <img
+        alt=""
+        loading="lazy"
+        sizes="(max-width: 200px) 100vw, 200px"
+        src="/avatar.jpg"
+        srcset="/avatar.jpg 50w,
+/avatar.jpg 100w,
+/avatar.jpg 200w,
+/avatar.jpg 300w,
+/avatar.jpg 400w,
+/avatar.jpg 851w"
+        style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+      />
+    </picture>
+    <noscript>
+      &lt;picture&gt;&lt;source type='image/webp' srcset="/avatar.webp 50w,
+/avatar.webp 100w,
+/avatar.webp 200w,
+/avatar.webp 300w,
+/avatar.webp 400w,
+/avatar.webp 851w" sizes="(max-width: 200px) 100vw, 200px" /&gt;&lt;source srcset="/avatar.jpg 50w,
+/avatar.jpg 100w,
+/avatar.jpg 200w,
+/avatar.jpg 300w,
+/avatar.jpg 400w,
+/avatar.jpg 851w" sizes="(max-width: 200px) 100vw, 200px" /&gt;&lt;img loading="lazy" sizes="(max-width: 200px) 100vw, 200px" srcset="/avatar.jpg 50w,
+/avatar.jpg 100w,
+/avatar.jpg 200w,
+/avatar.jpg 300w,
+/avatar.jpg 400w,
+/avatar.jpg 851w" src="/avatar.jpg" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+    </noscript>
+  </div>
+</div>
+`;

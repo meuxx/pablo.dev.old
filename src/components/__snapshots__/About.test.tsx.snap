@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About renders without crashing 1`] = `
+<div>
+  <section
+    id="one"
+  >
+    <header>
+      <h2>
+        About me
+      </h2>
+    </header>
+    <p>
+      I'm 
+      <strong>
+        Pablo Maceda
+      </strong>
+      , back-end developer offering 5 years of experience, with a solid background as PHP developer and a broad technical skill set. I have a passion for good design, clean code and good performance.
+    </p>
+    <p>
+      As a self-taught developer, I always enjoy learning new tools and technologies.
+    </p>
+    <ul
+      class="actions"
+    >
+      <li>
+        <a
+          aria-label="Curriculum Vitae"
+          class="button"
+          href="https://cv.pablo.dev"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Curriculum Vitae"
+        >
+          View CV
+        </a>
+      </li>
+    </ul>
+  </section>
+</div>
+`;
