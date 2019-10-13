@@ -69,9 +69,9 @@
     "serve": "gatsby serve",
     "start": "npm run develop",
     "test": "jest --watch",
+    "test:ci": "jest",
     "type-check": "tsc",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "snyk-protect": "snyk protect"
   },
   "repository": {
     "type": "git",
