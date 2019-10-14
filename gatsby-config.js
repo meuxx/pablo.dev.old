@@ -55,14 +55,14 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-netlify`,
-      // options: {
-      //   headers: {
-      //     '/sw.js': ['Cache-Control: no-cache'],
-      //   }, // option to add more headers. `Link` headers are transformed by the below criteria
-      // },
+      options: {
+        headers: {
+          '/sw.js': ['Cache-Control: no-cache'],
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-csp`,
