@@ -87,80 +87,20 @@ exports[`Skills renders without crashing 1`] = `
         <h3
           class="c3"
         >
-          JavaScript
+          SkillSet 1
         </h3>
         <span>
-          ES6, NodeJS, TypeScript, jQuery, Express, React, Gatsby
+          A, B, C
         </span>
       </div>
       <div>
         <h3
           class="c3"
         >
-          PHP
+          SkillSet 2
         </h3>
         <span>
-          Symfony, Laravel, Composer, PDO, Doctrine
-        </span>
-      </div>
-      <div>
-        <h3
-          class="c3"
-        >
-          Web
-        </h3>
-        <span>
-          CSS3, HTML5, Semantic, SPA, Rest/GraphQL APIs
-        </span>
-      </div>
-      <div>
-        <h3
-          class="c3"
-        >
-          Data Storage
-        </h3>
-        <span>
-          MySQL, Redis, Memcache, Cassandra, MongoDB, DynamoDB
-        </span>
-      </div>
-      <div>
-        <h3
-          class="c3"
-        >
-          Tools
-        </h3>
-        <span>
-          Git, SVN, Docker, Vagrant, Nginx, Apache, HAProxy, Ansible, Kibana, NewRelic, Pingdom, Grafana, Prometheus, Zabbix, GitlabCI
-        </span>
-      </div>
-      <div>
-        <h3
-          class="c3"
-        >
-          Cloud
-        </h3>
-        <span>
-          AWS, S3, Route53, DigitalOcean, Netlify
-        </span>
-      </div>
-      <div>
-        <h3
-          class="c3"
-        >
-          Scripting
-        </h3>
-        <span>
-          Python, Bash, Batch
-        </span>
-      </div>
-      <div>
-        <h3
-          class="c3"
-        >
-          Other
-        </h3>
-        <span>
-          Scrum, Kanban, PCI Compliance, SEO
+          D, E, F
         </span>
       </div>
     </div>

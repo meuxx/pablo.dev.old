@@ -12,7 +12,7 @@ import image from '../images/open_graph.jpg'
 import data from '../data.json'
 
 const index: React.FC = () => {
-  const { site, author } = data
+  const { site, author, skills, experience } = data
 
   const schemaOrgJSONLD: Person = {
     '@type': 'Person',
@@ -63,8 +63,8 @@ const index: React.FC = () => {
 
       <Main>
         <About />
-        <Skills />
-        <Experience />
+        <Skills data={skills} />
+        <Experience data={experience} />
       </Main>
     </Layout>
   )

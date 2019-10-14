@@ -6,12 +6,76 @@
     "siteUrl": "https://pablo.dev"
   },
   "author": {
-    "jobTitle": "Back-end developer",
+    "jobTitle": "Software Engineer",
     "email": "contact@pablo.dev",
     "social": ["https://gitlab.com/meuxx", "https://github.com/meuxx"],
     "country": "GB",
     "city": "London",
-    "organizationName": "Kooomo",
-    "organizationUrl": "https://www.kooomo.com"
-  }
+    "organizationName": "Sainsbury's",
+    "organizationUrl": "https://www.sainsburys.co.uk/"
+  },
+  "skills": [
+    {
+      "name": "JavaScript",
+      "skills": ["ES6", "NodeJS", "TypeScript", "jQuery", "Express", "React", "Gatsby"]
+    },
+    {
+      "name": "PHP",
+      "skills": ["Symfony", "Laravel", "Composer", "PDO", "Doctrine"]
+    },
+    {
+      "name": "Web",
+      "skills": ["CSS3", "HTML5", "Semantic", "SPA", "Rest/GraphQL APIs"]
+    },
+    {
+      "name": "Data Storage",
+      "skills": ["MySQL", "Redis", "Memcache", "Cassandra", "MongoDB", "DynamoDB"]
+    },
+    {
+      "name": "Tools",
+      "skills": [
+        "Git",
+        "SVN",
+        "Docker",
+        "Vagrant",
+        "Nginx",
+        "Apache",
+        "HAProxy",
+        "Ansible",
+        "Kibana",
+        "NewRelic",
+        "Pingdom",
+        "Grafana",
+        "Prometheus",
+        "Zabbix",
+        "GitlabCI"
+      ]
+    },
+    {
+      "name": "Cloud",
+      "skills": ["AWS", "S3", "Route53", "DigitalOcean", "Netlify"]
+    },
+    {
+      "name": "Scripting",
+      "skills": ["Python", "Bash", "Batch"]
+    },
+    {
+      "name": "Other",
+      "skills": ["Scrum", "Kanban", "PCI Compliance", "SEO"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Sainsbury's",
+      "location": "London, United Kingdom",
+      "period": "August 2019 – Present",
+      "description": ""
+    },
+    {
+      "company": "Kooomo",
+      "location": "Dublin, Ireland",
+      "period": "April 2014 – August 2019",
+      "description": "Developed and supported the ecommerce platform with special focus on performance improvements and the implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations alongside the Sysadmin team. During my last year in Kooomo I had the opportunity to lead the SRE team as well as a project to modernise the monolithic platform codebase."
+    }
+  ]
 }

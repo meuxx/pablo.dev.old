@@ -203,7 +203,8 @@ exports[`Header renders without crashing 1`] = `
       <h2
         class="c4"
       >
-        Software Engineer at
+        Software Engineer
+         at
          
         <a
           class="c3"
@@ -215,7 +216,7 @@ exports[`Header renders without crashing 1`] = `
           sainsburys.co.uk
         </a>
         <br />
-         London, UK
+        London, GB
       </h2>
     </div>
     <div />

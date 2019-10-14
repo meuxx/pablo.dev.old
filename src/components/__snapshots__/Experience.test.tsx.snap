@@ -86,34 +86,32 @@ exports[`Experience renders without crashing 1`] = `
       class="c2"
     >
       <h3>
-        Sainsbury's
+        Test company 1
          (
         London, United Kingdom
         ) 
         <strong>
-          August 2019 – Present
+          January 2019 – Present
         </strong>
       </h3>
-      <p />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec dolor leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque vulputate volutpat nisi et auctor.
+      </p>
     </article>
     <article
       class="c2"
     >
       <h3>
-        Kooomo
+        Test company 2
          (
-        Dublin, Ireland
+        Tokyo, Japan
         ) 
         <strong>
-          April 2014 – August 2019
+          August 2008 – January 2019
         </strong>
       </h3>
       <p>
-        Developed and supported the ecommerce platform with special focus on performance improvements and the
-    implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the
-    platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations
-    alongside the Sysadmin team. During my last year in Kooomo I had the opportunity to lead the SRE team as well as a
-    project to modernise the monolithic platform codebase.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non sapien ligula. Integer dignissim luctus augue sit amet commodo. Nunc hendrerit interdum sapien sed pretium.
       </p>
     </article>
   </section>

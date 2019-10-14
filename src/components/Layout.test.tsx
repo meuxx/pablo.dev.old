@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import Layout from './Layout'
 
-jest.mock('./Header', () => 'div')
+jest.mock('./Header', () => () => <div />)
 
 describe('Layout', () => {
   it('renders without crashing', () => {
