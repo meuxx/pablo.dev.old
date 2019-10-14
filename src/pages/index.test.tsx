@@ -4,6 +4,7 @@ import IndexPage from './index'
 
 jest.mock('../components/About', () => 'div')
 jest.mock('../components/Experience', () => 'div')
+jest.mock('../components/Skills', () => 'div')
 jest.mock('../components/Layout', () => 'div')
 
 describe('index', () => {

@@ -23,8 +23,7 @@ exports[`About renders without crashing 1`] = `
 }
 
 .c1 h1,
-.c1 h2,
-.c1 h3 {
+.c1 h2 {
   color: #ffffff;
   font-weight: 400;
 }
@@ -40,17 +39,6 @@ exports[`About renders without crashing 1`] = `
   line-height: 1.5em;
 }
 
-.c1 h3 {
-  font-size: 1.25em;
-  line-height: 1.5em;
-}
-
-.c1 h3 strong {
-  color: #0B61A4;
-  font-weight: 400;
-  float: right;
-}
-
 .c2 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -64,7 +52,6 @@ exports[`About renders without crashing 1`] = `
   cursor: pointer;
   display: inline-block;
   font-weight: 400;
-  height: 3.15em;
   height: calc(2.75em + 6px);
   line-height: 2.75em;
   min-width: 10em;
@@ -94,10 +81,6 @@ exports[`About renders without crashing 1`] = `
   .c1 h2 {
     font-size: 1.2em;
   }
-
-  .c1 h3 {
-    font-size: 1em;
-  }
 }
 
 <div>
@@ -116,7 +99,7 @@ exports[`About renders without crashing 1`] = `
       <strong>
         Pablo Maceda
       </strong>
-      , back-end developer offering 5 years of experience, with a solid background as PHP developer and a broad technical skill set. I have a passion for good design, clean code and good performance.
+      , back-end developer offering 5+ years of experience, with a solid background as PHP developer currently working with NodeJS. I have a broad technical skill set, passion for clean code and good performance.
     </p>
     <p>
       As a self-taught developer, I always enjoy learning new tools and technologies.

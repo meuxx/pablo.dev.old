@@ -23,8 +23,7 @@ exports[`Experience renders without crashing 1`] = `
 }
 
 .c1 h1,
-.c1 h2,
-.c1 h3 {
+.c1 h2 {
   color: #ffffff;
   font-weight: 400;
 }
@@ -40,12 +39,14 @@ exports[`Experience renders without crashing 1`] = `
   line-height: 1.5em;
 }
 
-.c1 h3 {
+.c2 h3 {
+  color: #ffffff;
+  font-weight: 400;
   font-size: 1.25em;
   line-height: 1.5em;
 }
 
-.c1 h3 strong {
+.c2 h3 strong {
   color: #0B61A4;
   font-weight: 400;
   float: right;
@@ -62,8 +63,10 @@ exports[`Experience renders without crashing 1`] = `
   .c1 h2 {
     font-size: 1.2em;
   }
+}
 
-  .c1 h3 {
+@media screen and (max-width:736px) {
+  .c2 h3 {
     font-size: 1em;
   }
 }
@@ -78,16 +81,41 @@ exports[`Experience renders without crashing 1`] = `
       <h2>
         Experience
       </h2>
+    </header>
+    <article
+      class="c2"
+    >
       <h3>
-        Kooomo (Dublin, Ireland) 
+        Sainsbury's
+         (
+        London, United Kingdom
+        ) 
         <strong>
-          April 2014 – Present
+          August 2019 – Present
         </strong>
       </h3>
-    </header>
-    <p>
-      Developed and supported the ecommerce platform with special focus on performance improvements and the implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations alongside the Sysadmin team. Responsible of the code reviews and the deployments. I was also responsible for the training / mentoring of the new employees.
-    </p>
+      <p />
+    </article>
+    <article
+      class="c2"
+    >
+      <h3>
+        Kooomo
+         (
+        Dublin, Ireland
+        ) 
+        <strong>
+          April 2014 – August 2019
+        </strong>
+      </h3>
+      <p>
+        Developed and supported the ecommerce platform with special focus on performance improvements and the
+    implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the
+    platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations
+    alongside the Sysadmin team. During my last year in Kooomo I had the opportunity to lead the SRE team as well as a
+    project to modernise the monolithic platform codebase.
+      </p>
+    </article>
   </section>
 </div>
 `;

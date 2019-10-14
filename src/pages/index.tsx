@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 
 import About from '../components/About'
 import Experience from '../components/Experience'
+import Skills from '../components/Skills'
 import Layout from '../components/Layout'
 import { Main } from '../styles/styles'
 
@@ -62,6 +63,7 @@ const index: React.FC = () => {
 
       <Main>
         <About />
+        <Skills />
         <Experience />
       </Main>
     </Layout>

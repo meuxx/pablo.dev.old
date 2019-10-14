@@ -26,9 +26,9 @@ const Header: React.FC = () => (
       <br />
 
       <SidebarSubtitle>
-        Back-end developer at{' '}
-        <SidebarLink href="https://www.kooomo.com/" rel="noopener noreferrer" target="_blank" title="Kooomo">
-          kooomo.com
+        Software Engineer at{' '}
+        <SidebarLink href="https://www.sainsburys.co.uk/" rel="noopener noreferrer" target="_blank" title="Sainsbury's">
+          sainsburys.co.uk
         </SidebarLink>
         <br /> London, UK
       </SidebarSubtitle>

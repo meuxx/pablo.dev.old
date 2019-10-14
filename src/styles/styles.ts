@@ -10,7 +10,7 @@ const headerPad = size.header.padding
 const Main = styled.main`
   margin-left: ${headerWidth.default};
   max-width: ${math(`50em + ${headerPad.default}`)};
-  padding: ${math(`${headerPad.default} * 2`)} ${headerPad.default} 0 ${headerPad.default};
+  padding: ${math(`${headerPad.default} * 2`)} ${headerPad.default};
   width: calc(100% - ${headerWidth.default});
 
   @media screen and ${breakpoints.large} {
@@ -176,6 +176,7 @@ const SidebarIcon = styled.li`
 `
 
 const SidebarIconLink = styled.a`
+  transition: color ${transition} ease-in-out;
   text-decoration: none;
   font-size: 1.5em;
   border-bottom: none;
@@ -184,6 +185,10 @@ const SidebarIconLink = styled.a`
 
   > span {
     display: none;
+  }
+
+  &:hover {
+    color: ${color.accent1.fgBold};
   }
 `
 
@@ -215,8 +220,7 @@ const Section = styled.section`
 
 const SectionHeader = styled.header`
   h1,
-  h2,
-  h3 {
+  h2 {
     color: ${color.accent2.fgBold};
     font-weight: ${font.weightBold};
   }
@@ -232,23 +236,9 @@ const SectionHeader = styled.header`
     line-height: 1.5em;
   }
 
-  h3 {
-    font-size: 1.25em;
-    line-height: 1.5em;
-
-    strong {
-      color: ${color.accent1.bg};
-      font-weight: ${font.weightBold};
-      float: right;
-    }
-  }
-
   @media screen and ${breakpoints.small} {
     h2 {
       font-size: 1.2em;
-    }
-    h3 {
-      font-size: 1em;
     }
   }
 `
@@ -263,7 +253,6 @@ const Button = styled.a`
   cursor: pointer;
   display: inline-block;
   font-weight: ${font.weightBold};
-  height: 3.15em;
   height: calc(2.75em + 6px);
   line-height: 2.75em;
   min-width: 10em;
@@ -314,6 +303,42 @@ const Avatar = styled(GatsbyImg)`
   }
 `
 
+const Experience = styled.article`
+  h3 {
+    color: ${color.accent2.fgBold};
+    font-weight: ${font.weightBold};
+    font-size: 1.25em;
+    line-height: 1.5em;
+
+    strong {
+      color: ${color.accent1.bg};
+      font-weight: ${font.weightBold};
+      float: right;
+    }
+  }
+
+  @media screen and ${breakpoints.small} {
+    h3 {
+      font-size: 1em;
+    }
+  }
+`
+
+const SkillSetWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: ${math(`${headerPad.default} * 0.5`)};
+
+  @media screen and ${breakpoints.xsmall} {
+    grid-template-columns: none;
+  }
+`
+
+const SkillSetTitle = styled.h3`
+  margin: 0;
+  color: ${color.accent1.bg};
+`
+
 export {
   Main,
   Link,
@@ -330,4 +355,7 @@ export {
   Section,
   SectionHeader,
   Button,
+  Experience,
+  SkillSetWrapper,
+  SkillSetTitle,
 }

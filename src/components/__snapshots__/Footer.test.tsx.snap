@@ -25,6 +25,8 @@ exports[`Footer renders without crashing 1`] = `
 }
 
 .c3 {
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 1.5em;
@@ -35,6 +37,10 @@ exports[`Footer renders without crashing 1`] = `
 
 .c3 > span {
   display: none;
+}
+
+.c3:hover {
+  color: #ffffff;
 }
 
 @media screen and (max-width:980px) {

@@ -203,16 +203,16 @@ exports[`Header renders without crashing 1`] = `
       <h2
         class="c4"
       >
-        Back-end developer at
+        Software Engineer at
          
         <a
           class="c3"
-          href="https://www.kooomo.com/"
+          href="https://www.sainsburys.co.uk/"
           rel="noopener noreferrer"
           target="_blank"
-          title="Kooomo"
+          title="Sainsbury's"
         >
-          kooomo.com
+          sainsburys.co.uk
         </a>
         <br />
          London, UK
