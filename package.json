@@ -32,7 +32,7 @@
     "react-helmet": "5.2.1",
     "react-images": "1.0.0",
     "schema-dts": "0.4.2",
-    "snyk": "1.239.0",
+    "snyk": "1.241.0",
     "styled-components": "4.4.0",
     "styled-normalize": "8.0.6"
   },
