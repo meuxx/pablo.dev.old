@@ -5,13 +5,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
+
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
+      - name: Use Node.js LTS
+        uses: dcodeIO/setup-node-nvm@master
         with:
-          node-version: '12.x'
-      - name: yarn install, and test
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
+      - name: Yarn install and test
         run: |
           yarn install --frozen-lockfile
           yarn test:ci
         env:
           CI: true
+
+      - name: Build
+        run: |
+          yarn build
