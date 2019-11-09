@@ -74,7 +74,7 @@
     "serve": "gatsby serve",
     "start": "yarn develop",
     "test": "jest --watch",
-    "test:ci": "jest",
+    "test:ci": "jest --runInBand",
     "snyk-protect": "snyk protect"
   },
   "repository": {
