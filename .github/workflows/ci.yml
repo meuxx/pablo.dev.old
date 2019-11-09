@@ -10,18 +10,18 @@ jobs:
         run: echo ::set-output name=NVMRC::$(cat .nvmrc)
         id: nvm
 
-      - name: Use Node.js 12.x
+      - name: Use Node.js LTS
         uses: dcodeIO/setup-node-nvm@master
         with:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
-      - name: yarn install, and test
+      - name: Yarn install and test
         run: |
           yarn install --frozen-lockfile
           yarn test:ci
         env:
           CI: true
 
-      - name: build
+      - name: Build
         run: |
           yarn build
