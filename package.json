@@ -67,14 +67,15 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "clean": "yarn exec rimraf .cache node_modules public coverage",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md,ts,tsx}\"",
-    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
-    "start": "yarn develop",
     "test": "jest --watch",
     "test:ci": "jest --runInBand",
+    "clean": "yarn exec rimraf .cache node_modules public coverage",
+    "lint": "eslint --ignore-path .gitignore . --ext js,jsx,ts,tsx",
+    "prettify": "prettier --list-different './src/**/*.{js,jsx,json,yml,yaml,css,less,scss,ts,tsx,md,graphql,mdx}'",
+    "prettify:fix": "yarn prettify --write",
+    "validate": "yarn lint && yarn prettify",
     "snyk-protect": "snyk protect"
   },
   "repository": {
