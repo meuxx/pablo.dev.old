@@ -6,7 +6,7 @@ const query = graphql`
   query {
     file(relativePath: { eq: "avatar.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 200, quality: 85, traceSVG: { background: "#033E6B", color: "#080a0e", threshold: 70 }) {
+        fluid(maxWidth: 200, quality: 85, traceSVG: { background: "#001e9a", color: "#080a0e", threshold: 70 }) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }

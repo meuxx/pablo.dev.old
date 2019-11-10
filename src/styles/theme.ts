@@ -1,21 +1,14 @@
 const color = {
-  bg: '#101010',
+  bg: '#0A0A0A',
   fg: '#a2a2a2',
   fgBold: '#ffffff',
-  fgLight: '#b2b2b2',
+  fgLight: '#c2c2c2',
 
-  accent1: {
-    bg: '#0B61A4',
-    fg: 'mix(#0B61A4, #ffffff, 25%)',
-    fgBold: '#ffffff',
-    fgLight: 'mix(#0B61A4, #ffffff, 40%)',
-  },
-
-  accent2: {
-    bg: '#033E6B',
-    fg: 'rgba(255,255,255,0.5)',
-    fgBold: '#ffffff',
-    fgLight: 'rgba(255,255,255,0.4)',
+  accent: {
+    bg: '#001e9a',
+    fg: 'rgba(255,255,255,0.6)',
+    fgBold: '#1573F4',
+    fgLight: 'rgba(255,255,255,0.8)',
   },
 }
 
