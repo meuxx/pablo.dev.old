@@ -15,9 +15,13 @@ jobs:
         with:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
-      - name: Yarn install and test
+      - name: Yarn install
         run: |
           yarn install --frozen-lockfile
+
+      - name: Test
+        run: |
+          yarn validate
           yarn test:ci
         env:
           CI: true
