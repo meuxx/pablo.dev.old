@@ -12,7 +12,7 @@ exports[`About renders without crashing 1`] = `
 }
 
 .c0 p {
-  color: #b2b2b2;
+  color: #c2c2c2;
   position: relative;
   margin: 0 0 2em 0;
 }
@@ -47,11 +47,11 @@ exports[`About renders without crashing 1`] = `
   transition: background-color 0.2s ease-in-out,color 0.2s ease-in-out,border-color 0.2s ease-in-out;
   background-color: transparent;
   border-radius: 0.35em;
-  border: solid 3px #0B61A4;
-  color: #0B61A4;
+  border: solid 3px #1573F4;
+  color: #1573F4;
   cursor: pointer;
   display: inline-block;
-  font-weight: 400;
+  font-weight: bold;
   height: calc(2.75em + 6px);
   line-height: 2.75em;
   min-width: 10em;
@@ -63,11 +63,11 @@ exports[`About renders without crashing 1`] = `
 }
 
 .c2:hover {
-  background-color: rgba(3,62,107,0.1);
+  background-color: rgba(0,30,154,0.2);
 }
 
 .c2:active {
-  background-color: rgba(11,97,164,0.1);
+  background-color: rgba(0,30,154,0.4);
 }
 
 @media screen and (max-width:736px) {

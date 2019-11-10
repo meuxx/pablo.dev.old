@@ -12,7 +12,7 @@ exports[`Experience renders without crashing 1`] = `
 }
 
 .c0 p {
-  color: #b2b2b2;
+  color: #c2c2c2;
   position: relative;
   margin: 0 0 2em 0;
 }
@@ -40,14 +40,14 @@ exports[`Experience renders without crashing 1`] = `
 }
 
 .c2 h3 {
-  color: #ffffff;
+  color: #1573F4;
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1.5em;
 }
 
 .c2 h3 strong {
-  color: #0B61A4;
+  color: #1573F4;
   font-weight: 400;
   float: right;
 }

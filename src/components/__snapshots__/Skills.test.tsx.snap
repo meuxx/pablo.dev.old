@@ -12,7 +12,7 @@ exports[`Skills renders without crashing 1`] = `
 }
 
 .c0 p {
-  color: #b2b2b2;
+  color: #c2c2c2;
   position: relative;
   margin: 0 0 2em 0;
 }
@@ -47,7 +47,7 @@ exports[`Skills renders without crashing 1`] = `
 
 .c3 {
   margin: 0;
-  color: #0B61A4;
+  color: #1573F4;
 }
 
 @media screen and (max-width:736px) {

@@ -17,11 +17,11 @@ exports[`Header renders without crashing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #033E6B;
+  background-color: #001e9a;
   background-attachment: scroll,fixed;
   background-image: url(test-file-stub);
   background-repeat: repeat;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.6);
   height: 100%;
   left: 0;
   padding: 4em 2em;
@@ -48,7 +48,7 @@ exports[`Header renders without crashing 1`] = `
 
 .c2 {
   font-weight: 400;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.6);
   font-size: 1.35em;
   line-height: 1.75em;
   margin: 0;
@@ -61,7 +61,7 @@ exports[`Header renders without crashing 1`] = `
 
 .c4 {
   font-weight: 400;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.6);
   font-size: 1.35em;
   line-height: 1.75em;
   margin: 0;
@@ -78,7 +78,7 @@ exports[`Header renders without crashing 1`] = `
   border-bottom: dotted 1px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0B61A4;
+  color: #001e9a;
   color: inherit;
 }
 
