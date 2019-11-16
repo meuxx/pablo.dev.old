@@ -24,7 +24,7 @@
     "gatsby-plugin-sitemap": "2.2.19",
     "gatsby-plugin-styled-components": "3.1.11",
     "gatsby-source-filesystem": "2.1.35",
-    "gatsby-transformer-sharp": "2.3.2",
+    "gatsby-transformer-sharp": "2.3.5",
     "graphql": "14.5.8",
     "polished": "3.4.2",
     "react": "16.11.0",
