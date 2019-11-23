@@ -22,7 +22,7 @@
     "gatsby-plugin-robots-txt": "1.5.0",
     "gatsby-plugin-sharp": "2.3.0",
     "gatsby-plugin-sitemap": "2.2.21",
-    "gatsby-plugin-styled-components": "3.1.11",
+    "gatsby-plugin-styled-components": "3.1.13",
     "gatsby-source-filesystem": "2.1.37",
     "gatsby-transformer-sharp": "2.3.5",
     "graphql": "14.5.8",
