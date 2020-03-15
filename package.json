@@ -31,7 +31,7 @@
     "react-dom": "16.13.0",
     "react-helmet": "5.2.1",
     "react-images": "1.0.0",
-    "schema-dts": "0.4.5",
+    "schema-dts": "0.5.1",
     "snyk": "1.297.2",
     "styled-components": "4.4.1",
     "styled-normalize": "8.0.7"
