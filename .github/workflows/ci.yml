@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Use Node.js LTS
-        uses: dcodeIO/setup-node-nvm@v2
+        uses: dcodeIO/setup-node-nvm@v2.0.0
 
       - name: Yarn install
         run: |
