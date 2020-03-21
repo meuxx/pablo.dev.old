@@ -190,7 +190,7 @@ exports[`Header renders without crashing 1`] = `
          
         <a
           aria-label="Contact email"
-          class="c3"
+          class="sc-AxirZ c3"
           href="mailto:contact@pablo.dev"
           rel="noopener noreferrer"
           target="_blank"
@@ -207,7 +207,7 @@ exports[`Header renders without crashing 1`] = `
          at
          
         <a
-          class="c3"
+          class="sc-AxirZ c3"
           href="https://www.sainsburys.co.uk/"
           rel="noopener noreferrer"
           target="_blank"
