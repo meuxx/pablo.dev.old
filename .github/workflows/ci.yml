@@ -25,10 +25,25 @@ jobs:
           yarn build
 
       - name: Deploy preview
-        uses: netlify/actions/cli@master
+        id: deploy
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        with:
-          args: deploy --message "${{ github.base_ref }}"
-          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+        run: |
+          npm install netlify-cli -g
+
+          NETLIFY_OUTPUT=$(netlify deploy --json --message "${{ github.head_ref }}@${{ github.sha }}")
+          echo $NETLIFY_OUTPUT
+
+          SITE_ID=$(echo "$NETLIFY_OUTPUT" | jq '.site_id' )
+          SITE_NAME=$(echo "$NETLIFY_OUTPUT" | jq '.site_name' )
+          DEPLOY_ID=$(echo "$NETLIFY_OUTPUT" | jq '.deploy_id' )
+          DEPLOY_URL=$(echo "$NETLIFY_OUTPUT" | jq '.deploy_url' )
+          LOGS=$(echo "$NETLIFY_OUTPUT" | jq '.logs' )
+
+          echo "::set-output name=NETLIFY_OUTPUT::$NETLIFY_OUTPUT"
+          echo "::set-output name=NETLIFY_SITE_ID::$SITE_ID"
+          echo "::set-output name=NETLIFY_SITE_NAME::$SITE_NAME"
+          echo "::set-output name=NETLIFY_DEPLOY_ID::$DEPLOY_ID"
+          echo "::set-output name=NETLIFY_DEPLOY_URL::$DEPLOY_URL"
+          echo "::set-output name=NETLIFY_LOGS::$LOGS"
