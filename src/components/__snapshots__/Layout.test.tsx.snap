@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout renders without crashing 1`] = `
+@media screen and (max-width:1800px) {
+
+}
+
 <div>
   <div>
     <div />
