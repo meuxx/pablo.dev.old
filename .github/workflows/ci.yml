@@ -30,7 +30,7 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         run: |
-          npm install netlify-cli -g
+          npm install netlify-cli -g -s
 
           NETLIFY_OUTPUT=$(netlify deploy --json --message "${{ github.head_ref }}@${{ github.sha }}")
           echo $NETLIFY_OUTPUT
@@ -47,3 +47,10 @@ jobs:
           echo "::set-output name=NETLIFY_DEPLOY_ID::$DEPLOY_ID"
           echo "::set-output name=NETLIFY_DEPLOY_URL::$DEPLOY_URL"
           echo "::set-output name=NETLIFY_LOGS::$LOGS"
+
+      - name: Comment on PR
+        uses: unsplash/comment-on-pr@v1.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          msg: 'Draft deploy is live! ${{ steps.deploy.outputs.NETLIFY_DEPLOY_URL }}'
