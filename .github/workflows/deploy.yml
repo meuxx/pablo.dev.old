@@ -1,0 +1,30 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy_master:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: dcodeIO/setup-node-nvm@v2.0.0
+
+      - name: Yarn install
+        run: |
+          yarn --frozen-lockfile --non-interactive
+
+      - name: Build
+        run: |
+          yarn build
+
+      - name: Deploy
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          DEPLOYMENT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          npm install netlify-cli@^2.0.0 -g -s
+          netlify deploy --prod --message "${DEPLOYMENT_MESSAGE}"
