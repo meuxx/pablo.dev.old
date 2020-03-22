@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js LTS
+      - name: Setup Node.js
         uses: dcodeIO/setup-node-nvm@v2.0.0
 
       - name: Yarn install
@@ -29,10 +29,11 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          DEPLOYMENT_MESSAGE: '${{ github.head_ref }}@${{ github.sha }}'
         run: |
           npm install netlify-cli@^2.0.0 -g -s
 
-          NETLIFY_OUTPUT=$(netlify deploy --json --message "${{ github.head_ref }}@${{ github.sha }}")
+          NETLIFY_OUTPUT=$(netlify deploy --json --message "${DEPLOYMENT_MESSAGE}")
           echo $NETLIFY_OUTPUT
 
           SITE_ID=$(echo "$NETLIFY_OUTPUT" | jq -r '.site_id' )
