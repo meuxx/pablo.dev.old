@@ -1,0 +1,56 @@
+name: Test Pull Request
+on: [pull_request]
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js LTS
+        uses: dcodeIO/setup-node-nvm@v2.0.0
+
+      - name: Yarn install
+        run: |
+          yarn --frozen-lockfile --non-interactive
+
+      - name: Test
+        run: |
+          yarn validate
+          yarn test:ci
+        env:
+          CI: true
+
+      - name: Build
+        run: |
+          yarn build
+
+      - name: Deploy preview
+        id: deploy
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          npm install netlify-cli@^2.0.0 -g -s
+
+          NETLIFY_OUTPUT=$(netlify deploy --json --message "${{ github.head_ref }}@${{ github.sha }}")
+          echo $NETLIFY_OUTPUT
+
+          SITE_ID=$(echo "$NETLIFY_OUTPUT" | jq -r '.site_id' )
+          SITE_NAME=$(echo "$NETLIFY_OUTPUT" | jq -r '.site_name' )
+          DEPLOY_ID=$(echo "$NETLIFY_OUTPUT" | jq -r '.deploy_id' )
+          DEPLOY_URL=$(echo "$NETLIFY_OUTPUT" | jq -r '.deploy_url' )
+          LOGS=$(echo "$NETLIFY_OUTPUT" | jq -r '.logs' )
+
+          echo "::set-output name=NETLIFY_OUTPUT::$NETLIFY_OUTPUT"
+          echo "::set-output name=NETLIFY_SITE_ID::$SITE_ID"
+          echo "::set-output name=NETLIFY_SITE_NAME::$SITE_NAME"
+          echo "::set-output name=NETLIFY_DEPLOY_ID::$DEPLOY_ID"
+          echo "::set-output name=NETLIFY_DEPLOY_URL::$DEPLOY_URL"
+          echo "::set-output name=NETLIFY_LOGS::$LOGS"
+
+      - name: Comment on PR
+        uses: unsplash/comment-on-pr@v1.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          msg: 'Draft deploy is [live](${{ steps.deploy.outputs.NETLIFY_DEPLOY_URL }})!'
