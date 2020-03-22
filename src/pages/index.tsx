@@ -32,6 +32,9 @@ const index: React.FC = () => {
             },
           ],
         }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
         metaTags={[{ name: 'image', content: `${site.siteUrl}${image}` }]}
       />
 
