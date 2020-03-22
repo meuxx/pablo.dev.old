@@ -1,5 +1,5 @@
 import React from 'react'
-import { GatsbySeo, SocialProfileJsonLd } from 'gatsby-plugin-next-seo'
+import { GatsbySeo } from 'gatsby-plugin-next-seo'
 
 import About from '../components/About'
 import Experience from '../components/Experience'
@@ -11,7 +11,7 @@ import image from '../images/open_graph.jpg'
 import data from '../data.json'
 
 const index: React.FC = () => {
-  const { site, author, skills, experience } = data
+  const { site, skills, experience } = data
 
   return (
     <Layout>
@@ -34,8 +34,6 @@ const index: React.FC = () => {
         }}
         metaTags={[{ name: 'image', content: `${site.siteUrl}${image}` }]}
       />
-
-      <SocialProfileJsonLd type="Person" name={site.author} url={site.siteUrl} sameAs={author.social} />
 
       <Main>
         <About />
