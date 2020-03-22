@@ -10,11 +10,11 @@ config.autoAddCss = false
 library.add(fab, faEnvelope)
 
 const Layout: React.FC = ({ children }) => (
-  <div>
+  <>
     <GlobalStyle />
     <Header />
     {children}
-  </div>
+  </>
 )
 
 export default Layout

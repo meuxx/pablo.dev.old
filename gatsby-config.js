@@ -3,7 +3,7 @@ const data = require('./src/data.json')
 module.exports = {
   siteMetadata: data.site,
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-next-seo`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

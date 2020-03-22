@@ -1,14 +1,12 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import { GatsbySeo } from 'gatsby-plugin-next-seo'
 
 import Layout from '../components/Layout'
 import { Main, Link, Section, SectionHeader } from '../styles/styles'
 
 const NotFound: React.FC = () => (
   <Layout>
-    <Helmet>
-      <title>404 Not found</title>
-    </Helmet>
+    <GatsbySeo title="404 Not found" />
 
     <Main>
       <Section>
