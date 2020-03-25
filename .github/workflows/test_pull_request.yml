@@ -57,7 +57,8 @@ jobs:
         env:
           CYPRESS_BASE_URL: ${{ steps.deploy.outputs.NETLIFY_DEPLOY_URL }}
 
-      - uses: actions/upload-artifact@v1
+      - name: Upload screenshot
+        uses: actions/upload-artifact@v2-preview
         with:
           name: screenshot-${{ github.sha }}
           path: cypress/screenshots/screenshot.test.js
