@@ -57,15 +57,25 @@ jobs:
         env:
           CYPRESS_BASE_URL: ${{ steps.deploy.outputs.NETLIFY_DEPLOY_URL }}
 
-      - name: Upload screenshot
-        uses: actions/upload-artifact@v2-preview
-        with:
-          name: screenshot-${{ github.sha }}
-          path: cypress/screenshots/screenshot.test.js/index.png
+      - name: Upload screenshots
+        id: deploy_screenshots
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          DEPLOYMENT_MESSAGE: '${{ github.head_ref }}@${{ github.sha }}/screenshots'
+        run: |
+          npm install netlify-cli@^2.0.0 -g -s
+
+          NETLIFY_OUTPUT=$(netlify deploy --json --dir=cypress/screenshots --message "${DEPLOYMENT_MESSAGE}")
+          echo $NETLIFY_OUTPUT
+
+          DEPLOY_URL=$(echo "$NETLIFY_OUTPUT" | jq -r '.deploy_url' )
+          echo "::set-output name=NETLIFY_DEPLOY_URL::$DEPLOY_URL"
 
       - name: Comment on PR
         uses: unsplash/comment-on-pr@v1.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          msg: 'Draft deploy is [live](${{ steps.deploy.outputs.NETLIFY_DEPLOY_URL }})!'
+          msg: 'Draft deploy is [live](${{ steps.deploy.outputs.NETLIFY_DEPLOY_URL }})!
+          ![Screenshot](${{ steps.deploy_screenshots.outputs.NETLIFY_DEPLOY_URL }}/screenshot.test.js/index.png)'
