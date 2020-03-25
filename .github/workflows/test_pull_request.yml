@@ -61,7 +61,7 @@ jobs:
         uses: actions/upload-artifact@v2-preview
         with:
           name: screenshot-${{ github.sha }}
-          path: cypress/screenshots/screenshot.test.js
+          path: cypress/screenshots/screenshot.test.js/index.png
 
       - name: Comment on PR
         uses: unsplash/comment-on-pr@v1.2.0
