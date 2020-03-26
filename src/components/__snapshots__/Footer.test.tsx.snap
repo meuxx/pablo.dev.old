@@ -61,7 +61,7 @@ exports[`Footer renders without crashing 1`] = `
 }
 
 <div>
-  <footer
+  <div
     class="c0"
   >
     <ul
@@ -125,6 +125,6 @@ exports[`Footer renders without crashing 1`] = `
         </a>
       </li>
     </ul>
-  </footer>
+  </div>
 </div>
 `;

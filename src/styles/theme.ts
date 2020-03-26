@@ -4,17 +4,10 @@ const color = {
   fgBold: '#ffffff',
   fgLight: '#b2b2b2',
 
-  accent1: {
-    bg: '#0B61A4',
-    fg: 'mix(#0B61A4, #ffffff, 25%)',
-    fgBold: '#ffffff',
-    fgLight: 'mix(#0B61A4, #ffffff, 40%)',
-  },
-
-  accent2: {
+  accent: {
     bg: '#033E6B',
     fg: 'rgba(255,255,255,0.5)',
-    fgBold: '#ffffff',
+    fgBold: '#0B61A4',
     fgLight: 'rgba(255,255,255,0.4)',
   },
 }
@@ -41,7 +34,7 @@ const font = {
   family: `'Source Sans Pro', Helvetica, sans-serif`,
   familyFixed: `'Courier New', monospace`,
   weight: '400',
-  weightBold: '400',
+  weightBold: '700',
 }
 
 const transition = '0.2s'
