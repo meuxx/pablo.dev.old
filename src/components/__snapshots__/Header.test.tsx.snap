@@ -47,7 +47,7 @@ exports[`Header renders without crashing 1`] = `
 }
 
 .c2 {
-  font-weight: 400;
+  font-weight: 700;
   color: rgba(255,255,255,0.5);
   font-size: 1.35em;
   line-height: 1.75em;
@@ -55,12 +55,12 @@ exports[`Header renders without crashing 1`] = `
 }
 
 .c2 strong {
-  font-weight: 400;
+  font-weight: 700;
   color: #ffffff;
 }
 
 .c4 {
-  font-weight: 400;
+  font-weight: 700;
   color: rgba(255,255,255,0.5);
   font-size: 1.35em;
   line-height: 1.75em;
@@ -68,7 +68,7 @@ exports[`Header renders without crashing 1`] = `
 }
 
 .c4 strong {
-  font-weight: 400;
+  font-weight: 700;
   color: #ffffff;
 }
 

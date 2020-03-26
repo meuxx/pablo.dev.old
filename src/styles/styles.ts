@@ -36,7 +36,7 @@ const Link = styled.a`
   transition: color ${transition} ease-in-out, border-color ${transition} ease-in-out;
   border-bottom: dotted 1px;
   text-decoration: none;
-  color: ${color.accent1.bg};
+  color: ${color.accent.fgBold};
 `
 
 const Sidebar = styled.header`
@@ -44,11 +44,11 @@ const Sidebar = styled.header`
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  background-color: ${color.accent2.bg};
+  background-color: ${color.accent.bg};
   background-attachment: scroll, fixed;
   background-image: url(${backgroundImage});
   background-repeat: repeat;
-  color: ${color.accent2.fg};
+  color: ${color.accent.fg};
   height: 100%;
   left: 0;
   padding: ${math(`${headerPad.default} * 2`)} ${headerPad.default};
@@ -98,14 +98,14 @@ const SidebarMain = styled.div`
 const SidebarTitle = styled.h1`
   font-weight: ${font.weightBold};
 
-  color: ${color.accent2.fg};
+  color: ${color.accent.fg};
   font-size: 1.35em;
   line-height: 1.75em;
   margin: 0;
 
   strong {
     font-weight: ${font.weightBold};
-    color: ${color.accent2.fgBold};
+    color: ${color.fgBold};
   }
 
   @media screen and ${breakpoints.large} {
@@ -135,12 +135,12 @@ const SidebarLink = styled(Link)`
 
   &:hover {
     border-bottom-color: transparent;
-    color: ${color.accent1.fgBold};
+    color: ${color.fgBold};
     text-decoration: none;
   }
 `
 
-const SidebarFooter = styled.footer`
+const SidebarFooter = styled.div`
   bottom: auto;
   left: auto;
   position: relative;
@@ -181,14 +181,14 @@ const SidebarIconLink = styled.a`
   font-size: 1.5em;
   border-bottom: none;
   position: relative;
-  color: ${color.accent2.fgLight};
+  color: ${color.accent.fgLight};
 
   > span {
     display: none;
   }
 
   &:hover {
-    color: ${color.accent1.fgBold};
+    color: ${color.fgBold};
   }
 `
 
@@ -221,7 +221,7 @@ const Section = styled.section`
 const SectionHeader = styled.header`
   h1,
   h2 {
-    color: ${color.accent2.fgBold};
+    color: ${color.fgBold};
     font-weight: ${font.weightBold};
   }
 
@@ -248,8 +248,8 @@ const Button = styled.a`
   transition: background-color ${transition} ease-in-out, color ${transition} ease-in-out, border-color 0.2s ease-in-out;
   background-color: transparent;
   border-radius: ${size.borderRadius};
-  border: solid 3px ${color.accent1.bg};
-  color: ${color.accent1.bg};
+  border: solid 3px ${color.accent.fgBold};
+  color: ${color.accent.fgBold};
   cursor: pointer;
   display: inline-block;
   font-weight: ${font.weightBold};
@@ -262,11 +262,11 @@ const Button = styled.a`
   white-space: nowrap;
 
   &:hover {
-    background-color: ${transparentize(0.9, color.accent2.bg)};
+    background-color: ${transparentize(0.8, color.accent.bg)};
   }
 
   &:active {
-    background-color: ${transparentize(0.9, color.accent1.bg)};
+    background-color: ${transparentize(0.7, color.accent.bg)};
   }
 `
 
@@ -305,13 +305,13 @@ const Avatar = styled(GatsbyImg)`
 
 const Experience = styled.article`
   h3 {
-    color: ${color.accent2.fgBold};
+    color: ${color.fgBold};
     font-weight: ${font.weightBold};
     font-size: 1.25em;
     line-height: 1.5em;
 
     strong {
-      color: ${color.accent1.bg};
+      color: ${color.accent.fgBold};
       font-weight: ${font.weightBold};
       float: right;
     }
@@ -336,7 +336,7 @@ const SkillSetWrapper = styled.div`
 
 const SkillSetTitle = styled.h3`
   margin: 0;
-  color: ${color.accent1.bg};
+  color: ${color.accent.fgBold};
 `
 
 export {
