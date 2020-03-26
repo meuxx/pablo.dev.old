@@ -43,15 +43,58 @@ jobs:
           LOGS=$(echo "$NETLIFY_OUTPUT" | jq -r '.logs' )
 
           echo "::set-output name=NETLIFY_OUTPUT::$NETLIFY_OUTPUT"
-          echo "::set-output name=NETLIFY_SITE_ID::$SITE_ID"
-          echo "::set-output name=NETLIFY_SITE_NAME::$SITE_NAME"
-          echo "::set-output name=NETLIFY_DEPLOY_ID::$DEPLOY_ID"
-          echo "::set-output name=NETLIFY_DEPLOY_URL::$DEPLOY_URL"
-          echo "::set-output name=NETLIFY_LOGS::$LOGS"
+          echo "::set-output name=SITE_ID::$SITE_ID"
+          echo "::set-output name=SITE_NAME::$SITE_NAME"
+          echo "::set-output name=DEPLOY_ID::$DEPLOY_ID"
+          echo "::set-output name=DEPLOY_URL::$DEPLOY_URL"
+          echo "::set-output name=LOGS::$LOGS"
+
+      - name: E2E test
+        uses: cypress-io/github-action@v1
+        with:
+          browser: chrome
+          headless: true
+        env:
+          CYPRESS_BASE_URL: ${{ steps.deploy.outputs.DEPLOY_URL }}
+
+      - name: Upload screenshots
+        id: deploy_screenshots
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          DEPLOYMENT_MESSAGE: '${{ github.head_ref }}@${{ github.sha }}/screenshots'
+        run: |
+          npm install netlify-cli@^2.0.0 -g -s
+
+          NETLIFY_OUTPUT=$(netlify deploy --json --dir=cypress/screenshots --message "${DEPLOYMENT_MESSAGE}")
+          echo $NETLIFY_OUTPUT
+
+          DEPLOY_URL=$(echo "$NETLIFY_OUTPUT" | jq -r '.deploy_url' )
+          echo "::set-output name=DEPLOY_URL::$DEPLOY_URL"
 
       - name: Comment on PR
         uses: unsplash/comment-on-pr@v1.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          msg: 'Draft deploy is [live](${{ steps.deploy.outputs.NETLIFY_DEPLOY_URL }})!'
+          msg: "
+          Draft deploy is [live](${{ steps.deploy.outputs.DEPLOY_URL }})!\n
+          ---\n
+          > ![Screenshot](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/preview.png)\n
+          >\n
+          > <details>\n
+          > <summary>macbook-13</summary>\n
+          >\n
+          > ![macbook-13](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/macbook-13.png)\n
+          >  </details>\n
+          > <details>\n
+          > <summary>ipad-mini</summary>\n
+          >\n
+          > ![ipad-mini](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/ipad-mini.png)\n
+          >  </details>\n
+          > <details>\n
+          > <summary>iphone-x</summary>\n
+          >\n
+          > ![iphone-x](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/iphone-x.png)\n
+          >  </details>\n
+          "
