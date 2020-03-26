@@ -77,11 +77,26 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          msg: '
+          msg: "
           Draft deploy is [live](${{ steps.deploy.outputs.NETLIFY_DEPLOY_URL }})!\n
           ---\n
           > ![Screenshot](${{ steps.deploy_screenshots.outputs.NETLIFY_DEPLOY_URL }}/screenshot.test.js/cropped.png)\n
-          > <details><summary>macbook-13</summary><img src="${{ steps.deploy_screenshots.outputs.NETLIFY_DEPLOY_URL }}/screenshot.test.js/macbook-13.png" alt="macbook-13"/></details>\n
-          > <details><summary>ipad-mini</summary><img src="${{ steps.deploy_screenshots.outputs.NETLIFY_DEPLOY_URL }}/screenshot.test.js/ipad-mini.png" alt="ipad-mini"/></details>\n
-          > <details><summary>iphone-x</summary><img src="${{ steps.deploy_screenshots.outputs.NETLIFY_DEPLOY_URL }}/screenshot.test.js/iphone-x.png" alt="iphone-x"/></details>\n
-          '
+          >\n
+          > <details>\n
+          > <summary>macbook-13</summary>\n
+          >\n
+          > ![macbook-13](${{ steps.deploy_screenshots.outputs.NETLIFY_DEPLOY_URL }}/screenshot.test.js/macbook-13.png)\n
+          >  </details>\n
+
+          > <details>\n
+          > <summary>ipad-mini</summary>\n
+          >\n
+          > ![ipad-mini](${{ steps.deploy_screenshots.outputs.NETLIFY_DEPLOY_URL }}/screenshot.test.js/ipad-mini.png)\n
+          >  </details>\n
+
+          > <details>\n
+          > <summary>iphone-x</summary>\n
+          >\n
+          > ![iphone-x](${{ steps.deploy_screenshots.outputs.NETLIFY_DEPLOY_URL }}/screenshot.test.js/iphone-x.png)\n
+          >  </details>\n
+          "
