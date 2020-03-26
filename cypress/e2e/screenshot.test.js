@@ -6,6 +6,14 @@ describe('index', () => {
   it('takes a screenshot', () => {
     cy.contains('View CV')
 
+    // Wait for the avatar to be fully loaded
+    cy.get('picture')
+      .find('img')
+      .should('be.visible')
+      .and($img => {
+        expect($img[0].naturalWidth).to.be.greaterThan(0)
+      })
+
     cy.viewport('macbook-13')
     cy.screenshot('macbook-13')
 
