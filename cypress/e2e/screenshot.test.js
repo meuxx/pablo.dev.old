@@ -10,7 +10,7 @@ describe('index', () => {
     cy.get('picture')
       .find('img')
       .should('be.visible')
-      .and($img => {
+      .and(($img) => {
         expect($img[0].naturalWidth).to.be.greaterThan(0)
       })
 
