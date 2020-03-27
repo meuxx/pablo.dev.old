@@ -9,6 +9,17 @@ jobs:
       - name: Setup Node.js
         uses: dcodeIO/setup-node-nvm@v2.0.0
 
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: |
+            ./node_modules
+            ~/.cache/yarn
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('./yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-${{ hashFiles('./yarn.lock') }}
+            ${{ runner.os }}-node-modules-
+
       - name: Yarn install
         run: |
           yarn --frozen-lockfile --non-interactive
@@ -78,23 +89,23 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           msg: "
-          Draft deploy is [live](${{ steps.deploy.outputs.DEPLOY_URL }})!\n
-          ---\n
-          > ![Screenshot](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/preview.png)\n
-          >\n
-          > <details>\n
-          > <summary>macbook-13</summary>\n
-          >\n
-          > ![macbook-13](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/macbook-13.png)\n
-          >  </details>\n
-          > <details>\n
-          > <summary>ipad-mini</summary>\n
-          >\n
-          > ![ipad-mini](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/ipad-mini.png)\n
-          >  </details>\n
-          > <details>\n
-          > <summary>iphone-x</summary>\n
-          >\n
-          > ![iphone-x](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/iphone-x.png)\n
-          >  </details>\n
-          "
+            Draft deploy is [live](${{ steps.deploy.outputs.DEPLOY_URL }})!\n
+            ---\n
+            > ![Screenshot](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/preview.png)\n
+            >\n
+            > <details>\n
+            > <summary>macbook-13</summary>\n
+            >\n
+            > ![macbook-13](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/macbook-13.png)\n
+            >  </details>\n
+            > <details>\n
+            > <summary>ipad-mini</summary>\n
+            >\n
+            > ![ipad-mini](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/ipad-mini.png)\n
+            >  </details>\n
+            > <details>\n
+            > <summary>iphone-x</summary>\n
+            >\n
+            > ![iphone-x](${{ steps.deploy_screenshots.outputs.DEPLOY_URL }}/screenshot.test.js/iphone-x.png)\n
+            >  </details>\n
+            "
