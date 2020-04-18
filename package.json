@@ -30,7 +30,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet-async": "1.0.5",
-    "react-images": "1.1.2",
+    "react-images": "1.1.3",
     "snyk": "1.305.1",
     "styled-components": "5.1.0",
     "styled-normalize": "8.0.7"
