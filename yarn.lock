@@ -13587,10 +13587,10 @@ react-hot-loader@^4.12.20:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-images@1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/react-images/-/react-images-1.1.6.tgz#13e4fb2adbc59a5adb5c14bfab344bb8fb1178c2"
-  integrity sha512-eAuL/XkhBC0NvZoZ5+jjTIq8HFYd56uilRL/TdGN2UM8aBmuAH41yi90jQyk8CRPIrZX0p+SQe7YaWfTnBXAxw==
+react-images@1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/react-images/-/react-images-1.1.7.tgz#1d76a091981deaf76dbb3fac1e40391f080347dd"
+  integrity sha512-9paR4bdP/SPTbJ/8cLa6+7+pcq8PGN4/8UjTfztQKBRzGxH0BtHrB7oj/7As2RmYMkOsVIMNfDaWzZZK4faIRA==
   dependencies:
     a11y-focus-store "^1.0.0"
     cross-env "^7.0.2"
