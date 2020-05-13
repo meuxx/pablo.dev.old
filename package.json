@@ -32,7 +32,7 @@
     "react-dom": "16.13.1",
     "react-helmet-async": "1.0.6",
     "react-images": "1.1.7",
-    "snyk": "1.320.3",
+    "snyk": "^1.320.3",
     "styled-components": "5.1.0",
     "styled-normalize": "8.0.7"
   },
@@ -81,7 +81,8 @@
     "prettify": "prettier --list-different './src/**/*.{js,jsx,json,yml,yaml,css,less,scss,ts,tsx,md,graphql,mdx}'",
     "prettify:fix": "yarn prettify --write",
     "validate": "yarn lint && yarn prettify",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
