@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
-        lang: 'en',
+        lang: 'en-GB',
         dir: 'ltr',
       },
     },
@@ -51,11 +51,17 @@ module.exports = {
         theme_color: '#033e6b',
         display: 'minimal-ui',
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
+        cache_busting_mode: 'none',
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/*'],
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-netlify`,
       options: {
