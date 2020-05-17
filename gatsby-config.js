@@ -29,14 +29,16 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Source Sans Pro`,
-            variants: [`400`, `400italic`],
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: `Source Sans Pro`,
+              variants: [`400`, `700`],
+            },
+          ],
+        },
       },
     },
     `gatsby-plugin-sitemap`,
