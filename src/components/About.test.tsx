@@ -1,10 +1,10 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { renderComponent } from '../test-helpers'
 import About from './About'
 
 describe('About', () => {
   it('renders without crashing', () => {
-    const { container } = render(<About />)
+    const { container } = renderComponent(<About />)
 
     expect(container).toBeDefined()
     expect(container).toMatchSnapshot()

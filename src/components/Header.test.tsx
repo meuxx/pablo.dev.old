@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { renderComponent } from '../test-helpers'
 import Header from './Header'
 
 jest.mock('./Avatar', () => () => <div />)
@@ -7,7 +7,7 @@ jest.mock('./Footer', () => () => <div />)
 
 describe('Header', () => {
   it('renders without crashing', () => {
-    const { container } = render(<Header />)
+    const { container } = renderComponent(<Header />)
 
     expect(container).toBeDefined()
     expect(container).toMatchSnapshot()

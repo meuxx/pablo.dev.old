@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { renderComponent } from '../test-helpers'
 import Skills from './Skills'
 
 describe('Skills', () => {
@@ -15,7 +15,7 @@ describe('Skills', () => {
       },
     ]
 
-    const { container } = render(<Skills data={data} />)
+    const { container } = renderComponent(<Skills data={data} />)
 
     expect(container).toBeDefined()
     expect(container).toMatchSnapshot()

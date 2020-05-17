@@ -1,7 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`index renders without crashing 1`] = `
+.c0 {
+  margin-left: 24%;
+  max-width: 52em;
+  padding: 4em 2em;
+  width: calc(100% - 24%);
+}
+
+@media screen and (max-width:1280px) {
+  .c0 {
+    margin-left: 30%;
+    max-width: none;
+    padding: 6em 3em 3em 3em;
+    width: calc(100% - 30%);
+  }
+}
+
+@media screen and (max-width:980px) {
+  .c0 {
+    margin: 0;
+    padding: 6em 4em;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:736px) {
+  .c0 {
+    padding: 2.25em 1.5em 0.25em 1.5em;
+  }
+}
+
 <div>
-  <div />
+  <div
+    data-component="Layout"
+    data-props="{}"
+  >
+    <div
+      data-component="GatsbySeo"
+      data-props="{
+ \\"title\\": \\"Pablo Maceda | Back-end developer in London, UK\\",
+ \\"description\\": \\"I'm Pablo Maceda, back-end developer offering 5 years of experience, with a solid background as PHP developer and a broad technical skill set\\",
+ \\"canonical\\": \\"https://pablo.dev\\",
+ \\"openGraph\\": {
+  \\"type\\": \\"website\\",
+  \\"url\\": \\"https://pablo.dev\\",
+  \\"title\\": \\"Pablo Maceda | Back-end developer in London, UK\\",
+  \\"site_name\\": \\"Pablo Maceda\\",
+  \\"description\\": \\"I'm Pablo Maceda, back-end developer offering 5 years of experience, with a solid background as PHP developer and a broad technical skill set\\",
+  \\"images\\": [
+   {
+    \\"url\\": \\"https://pablo.devtest-file-stub\\"
+   }
+  ]
+ },
+ \\"twitter\\": {
+  \\"cardType\\": \\"summary_large_image\\"
+ },
+ \\"metaTags\\": [
+  {
+   \\"name\\": \\"image\\",
+   \\"content\\": \\"https://pablo.devtest-file-stub\\"
+  }
+ ]
+}"
+    />
+    <main
+      class="c0"
+    >
+      <div />
+      <div />
+      <div />
+    </main>
+  </div>
 </div>
 `;
