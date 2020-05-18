@@ -48,20 +48,20 @@ module.exports = {
       options: {
         name: 'pablo.dev',
         short_name: 'pablo.dev',
-        start_url: '/',
+        start_url: 'https://pablo.dev',
         background_color: '#101010',
         theme_color: '#033e6b',
         display: 'minimal-ui',
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
+        lang: `en`,
         cache_busting_mode: 'none',
-        legacy: false,
       },
     },
     {
       resolve: 'gatsby-plugin-offline',
       options: {
         workboxConfig: {
-          globPatterns: ['**/*'],
+          globPatterns: ['**/[!_.]*'],
         },
       },
     },
