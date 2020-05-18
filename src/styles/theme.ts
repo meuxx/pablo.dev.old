@@ -47,4 +47,7 @@ const breakpoints = {
   xsmall: '(max-width: 480px)',
 }
 
-export { color, size, font, transition, breakpoints }
+const theme = { color, size, font, transition, breakpoints }
+
+export type Theme = typeof theme
+export default theme

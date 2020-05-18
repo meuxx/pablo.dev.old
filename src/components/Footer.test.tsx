@@ -1,10 +1,10 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { renderComponent } from '../test-helpers'
 import Footer from './Footer'
 
 describe('Footer', () => {
   it('renders without crashing', () => {
-    const { container } = render(<Footer />)
+    const { container } = renderComponent(<Footer />)
 
     expect(container).toBeDefined()
     expect(container).toMatchSnapshot()

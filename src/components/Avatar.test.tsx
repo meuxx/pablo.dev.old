@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { renderComponent } from '../test-helpers'
 import Avatar from './Avatar'
 import * as Gatsby from 'gatsby'
 
@@ -26,7 +26,7 @@ useStaticQuery.mockImplementation(() => avatarMock)
 
 describe('Avatar', () => {
   it('renders without crashing', () => {
-    const { container } = render(<Avatar />)
+    const { container } = renderComponent(<Avatar />)
 
     expect(container).toBeDefined()
     expect(container).toMatchSnapshot()
