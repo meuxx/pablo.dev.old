@@ -38,6 +38,16 @@ const Link = styled.a`
   transition: ${({ theme }) => `color ${theme.transition} ease-in-out, border-color ${theme.transition} ease-in-out`};
   border-bottom: dotted 1px;
   text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    border-bottom-color: transparent;
+    color: ${({ theme }) => theme.color.fgBold};
+    text-decoration: none;
+  }
+`
+
+const PageLink = styled(Link)`
   color: ${({ theme }) => theme.color.accent.fgBold};
 `
 
@@ -129,22 +139,13 @@ const SidebarTitle = styled.h1`
   }
 `
 
-const SidebarSubtitle = styled(SidebarTitle).attrs({ as: 'h2' })`
+const SidebarSubtitle = styled.h2`
+  ${SidebarTitle}
   @media screen and ${({ theme }) => theme.breakpoints.medium} {
     font-size: 1.35em;
   }
   @media screen and ${({ theme }) => theme.breakpoints.small} {
     font-size: 1.35em;
-  }
-`
-
-const SidebarLink = styled(Link)`
-  color: inherit;
-
-  &:hover {
-    border-bottom-color: transparent;
-    color: ${({ theme }) => theme.color.fgBold};
-    text-decoration: none;
   }
 `
 
@@ -353,11 +354,11 @@ const SkillSetTitle = styled.h3`
 export {
   Main,
   Link,
+  PageLink,
   Sidebar,
   SidebarMain,
   SidebarTitle,
   SidebarSubtitle,
-  SidebarLink,
   SidebarFooter,
   SidebarIconWrapper,
   SidebarIcon,

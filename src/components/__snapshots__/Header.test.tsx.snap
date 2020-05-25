@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders without crashing 1`] = `
+.c4 {
+  -webkit-transition: color 0.2s ease-in-out,border-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out,border-color 0.2s ease-in-out;
+  border-bottom: dotted 1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.c4:hover {
+  border-bottom-color: transparent;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -46,47 +62,21 @@ exports[`Header renders without crashing 1`] = `
   margin: 0 0 1em 0;
 }
 
-.c2 {
-  font-weight: 700;
-  color: rgba(255,255,255,0.5);
-  font-size: 1.35em;
-  line-height: 1.75em;
-  margin: 0;
-}
-
-.c2 strong {
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.c4 {
-  font-weight: 700;
-  color: rgba(255,255,255,0.5);
-  font-size: 1.35em;
-  line-height: 1.75em;
-  margin: 0;
-}
-
-.c4 strong {
-  font-weight: 700;
-  color: #ffffff;
-}
-
 .c3 {
-  -webkit-transition: color 0.2s ease-in-out,border-color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out,border-color 0.2s ease-in-out;
-  border-bottom: dotted 1px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #0B61A4;
-  color: inherit;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  font-size: 1.35em;
+  line-height: 1.75em;
+  margin: 0;
 }
 
-.c3:hover {
-  border-bottom-color: transparent;
+.c3 strong {
+  font-weight: 700;
   color: #ffffff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+}
+
+.c5 .c2 @media screen and (max-width:980px) {
+  font-size: 1.35em;
 }
 
 @media screen and (max-width:1280px) {
@@ -125,49 +115,25 @@ exports[`Header renders without crashing 1`] = `
 }
 
 @media screen and (max-width:1280px) {
-  .c2 {
+  .c3 {
     font-size: 1.25em;
   }
 }
 
 @media screen and (max-width:980px) {
-  .c2 {
+  .c3 {
     font-size: 1.75em;
   }
 }
 
 @media screen and (max-width:736px) {
-  .c2 {
-    font-size: 1.35em;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .c4 {
-    font-size: 1.25em;
-  }
-}
-
-@media screen and (max-width:980px) {
-  .c4 {
-    font-size: 1.75em;
-  }
-}
-
-@media screen and (max-width:736px) {
-  .c4 {
-    font-size: 1.35em;
-  }
-}
-
-@media screen and (max-width:980px) {
-  .c4 {
+  .c3 {
     font-size: 1.35em;
   }
 }
 
 @media screen and (max-width:736px) {
-  .c4 {
+  .c5 {
     font-size: 1.35em;
   }
 }
@@ -181,7 +147,7 @@ exports[`Header renders without crashing 1`] = `
     >
       <div />
       <h1
-        class="c2"
+        class="c2 c3"
       >
         <strong>
           Pablo Maceda
@@ -190,7 +156,7 @@ exports[`Header renders without crashing 1`] = `
          
         <a
           aria-label="Contact email"
-          class="sc-AxirZ c3"
+          class="c4"
           href="mailto:contact@pablo.dev"
           rel="noopener noreferrer"
           target="_blank"
@@ -201,13 +167,13 @@ exports[`Header renders without crashing 1`] = `
       </h1>
       <br />
       <h2
-        class="c4"
+        class="c5"
       >
         Software Engineer
          at
          
         <a
-          class="sc-AxirZ c3"
+          class="c4"
           href="https://www.sainsburys.co.uk/"
           rel="noopener noreferrer"
           target="_blank"
@@ -216,7 +182,7 @@ exports[`Header renders without crashing 1`] = `
           sainsburys.co.uk
         </a>
         <br />
-        London, GB
+        London, UK
       </h2>
     </div>
     <div />
