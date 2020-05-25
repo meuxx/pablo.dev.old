@@ -48,12 +48,19 @@ module.exports = {
       options: {
         name: 'pablo.dev',
         short_name: 'pablo.dev',
-        start_url: 'https://pablo.dev',
+        start_url: './',
         background_color: '#101010',
         theme_color: '#033e6b',
         display: 'minimal-ui',
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
-        lang: `en`,
+        icons: [
+          { src: 'icons/icon-48x48.png', sizes: '48x48', type: 'image/png' },
+          { src: 'icons/icon-72x72.png', sizes: '72x72', type: 'image/png' },
+          { src: 'icons/icon-96x96.png', sizes: '96x96', type: 'image/png' },
+          { src: 'icons/icon-144x144.png', sizes: '144x144', type: 'image/png' },
+          { src: 'icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+        ],
+        lang: `en-GB`,
         cache_busting_mode: 'none',
       },
     },
@@ -61,7 +68,7 @@ module.exports = {
       resolve: 'gatsby-plugin-offline',
       options: {
         workboxConfig: {
-          globPatterns: ['**/[!_.]*'],
+          globPatterns: ['**/[!_.]*.{js,css,html,png,jpg,webp}'],
         },
       },
     },
