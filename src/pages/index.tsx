@@ -23,7 +23,6 @@ const index: React.FC = () => {
           type: 'website',
           url: site.siteUrl,
           title: site.title,
-          // eslint-disable-next-line @typescript-eslint/camelcase
           site_name: site.author,
           description: site.description,
           images: [
