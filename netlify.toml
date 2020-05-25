@@ -8,7 +8,7 @@
   force = true
 
 [[redirects]]
-  from = "https://pablo-dev.netlify.com/*"
+  from = "https://pablo-dev.netlify.app/*"
   to = " https://pablo.dev/:splat"
   status = 301
   force = true
