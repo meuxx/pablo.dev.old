@@ -2,7 +2,7 @@ import { render } from '@testing-library/react'
 import { Themed } from './styles/GlobalStyle'
 import React from 'react'
 
-const renderComponent = (ui: React.ReactElement, options?: object) => render(ui, { wrapper: Themed, ...options })
+const renderComponent: typeof render = (ui, options) => render(ui, { wrapper: Themed, ...options })
 
 const mockComponent = (componentName: string): React.FC => (props) => {
   const { children, ...otherProps } = props
