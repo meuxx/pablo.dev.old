@@ -43,8 +43,8 @@ exports[`About renders without crashing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: background-color 0.2s ease-in-out,color 0.2s ease-in-out,border-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out,color 0.2s ease-in-out,border-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out,color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out,color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   background-color: transparent;
   border-radius: 0.35em;
   border: solid 3px #0B61A4;
