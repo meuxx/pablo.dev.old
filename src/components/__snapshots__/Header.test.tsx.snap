@@ -75,7 +75,7 @@ exports[`Header renders without crashing 1`] = `
   color: #ffffff;
 }
 
-.c5 .c2 @media screen and (max-width:980px) {
+.c5 .c2  @media screen and (max-width:980px) {
   font-size: 1.35em;
 }
 
