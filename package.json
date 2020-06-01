@@ -27,7 +27,7 @@
     "gatsby-source-filesystem": "2.3.8",
     "gatsby-transformer-sharp": "2.5.3",
     "graphql": "15.0.0",
-    "polished": "3.6.3",
+    "polished": "3.6.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet-async": "1.0.6",
