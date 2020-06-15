@@ -8,8 +8,7 @@
     "noEmit": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "typeRoots": ["src/@types"]
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules", "public", ".cache"]
 }

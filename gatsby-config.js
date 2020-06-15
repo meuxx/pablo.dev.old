@@ -66,6 +66,15 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-fathom',
+      options: {
+        trackingUrl: 'haddock.pablo.dev',
+        siteId: 'XMVFXWIR',
+        whitelistHostnames: ['pablo.dev'],
+        embedVersion: 'v2',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-offline',
       options: {
         workboxConfig: {
