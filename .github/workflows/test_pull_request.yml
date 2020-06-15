@@ -48,7 +48,7 @@ jobs:
 
       - name: Build
         run: |
-          yarn build
+          yarn build:cache
 
       - name: Deploy preview
         id: deploy

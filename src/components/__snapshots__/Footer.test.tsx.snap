@@ -90,25 +90,6 @@ exports[`Footer renders without crashing 1`] = `
         class="c2"
       >
         <a
-          aria-label="GitLab"
-          class="c3"
-          href="https://gitlab.com/meuxx"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="GitLab"
-        >
-          <svg
-            class="fab-gitlab"
-          />
-          <span>
-            GitLab
-          </span>
-        </a>
-      </li>
-      <li
-        class="c2"
-      >
-        <a
           aria-label="GitHub"
           class="c3"
           href="https://github.com/meuxx"
@@ -121,6 +102,25 @@ exports[`Footer renders without crashing 1`] = `
           />
           <span>
             GitHub
+          </span>
+        </a>
+      </li>
+      <li
+        class="c2"
+      >
+        <a
+          aria-label="LinkedIn"
+          class="c3"
+          href="https://www.linkedin.com/in/pablo-maceda"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="LinkedIn"
+        >
+          <svg
+            class="fab-linkedin"
+          />
+          <span>
+            LinkedIn
           </span>
         </a>
       </li>
