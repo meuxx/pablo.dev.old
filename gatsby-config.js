@@ -97,6 +97,8 @@ module.exports = {
         mergeStyleHashes: false,
         directives: {
           'style-src': "'self' 'unsafe-inline'",
+          'script-src': `'self' https://haddock.pablo.dev`,
+          'img-src': `'self' https://haddock.pablo.dev data:`,
         },
       },
     },

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useGoal } from 'gatsby-plugin-fathom'
 
 import Avatar from './Avatar'
 import Footer from './Footer'
@@ -10,44 +11,51 @@ const getShortUrl = (url: string) => {
   return hostname.replace(/^(www\.)?/, '')
 }
 
-const Header: React.FC = () => (
-  <Sidebar>
-    <SidebarMain>
-      <Avatar />
+const Header: React.FC = () => {
+  const handleMailGoal = useGoal('NMFGPZ35')
+  const handleOrganizationGoal = useGoal('HBXPURPT')
 
-      <SidebarTitle>
-        <strong>{data.site.author}</strong>
-        <br />{' '}
-        <Link
-          href={`mailto:${data.author.email}`}
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label="Contact email"
-          title="Contact email"
-        >
-          {data.author.email}
-        </Link>
-      </SidebarTitle>
+  return (
+    <Sidebar>
+      <SidebarMain>
+        <Avatar />
 
-      <br />
+        <SidebarTitle>
+          <strong>{data.site.author}</strong>
+          <br />{' '}
+          <Link
+            href={`mailto:${data.author.email}`}
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="Contact email"
+            title="Contact email"
+            onClick={handleMailGoal}
+          >
+            {data.author.email}
+          </Link>
+        </SidebarTitle>
 
-      <SidebarSubtitle>
-        {data.author.jobTitle} at{' '}
-        <Link
-          href={data.author.organizationUrl}
-          rel="noopener noreferrer"
-          target="_blank"
-          title={data.author.organizationName}
-        >
-          {getShortUrl(data.author.organizationUrl)}
-        </Link>
         <br />
-        {`${data.author.city}, ${data.author.country}`}
-      </SidebarSubtitle>
-    </SidebarMain>
 
-    <Footer />
-  </Sidebar>
-)
+        <SidebarSubtitle>
+          {data.author.jobTitle} at{' '}
+          <Link
+            href={data.author.organizationUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+            title={data.author.organizationName}
+            onClick={handleOrganizationGoal}
+          >
+            {getShortUrl(data.author.organizationUrl)}
+          </Link>
+          <br />
+          {`${data.author.city}, ${data.author.country}`}
+        </SidebarSubtitle>
+      </SidebarMain>
+
+      <Footer />
+    </Sidebar>
+  )
+}
 
 export default Header
