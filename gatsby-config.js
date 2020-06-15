@@ -96,9 +96,10 @@ module.exports = {
         mergeDefaultDirectives: true,
         mergeStyleHashes: false,
         directives: {
-          'style-src': "'self' 'unsafe-inline'",
-          'script-src': `'self' https://haddock.pablo.dev`,
-          'img-src': `'self' https://haddock.pablo.dev data:`,
+          'style-src': `'self' 'unsafe-inline'`,
+          'script-src': `'self' https://*.pablo.dev`,
+          'img-src': `'self' https://*.pablo.dev data:`,
+          'connect-src': `'self' https://*.pablo.dev`,
         },
       },
     },
