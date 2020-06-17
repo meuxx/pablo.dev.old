@@ -1,9 +1,9 @@
 import React from 'react'
-import { useGoal } from 'gatsby-plugin-fathom'
 
 import Avatar from './Avatar'
 import Footer from './Footer'
 import { Sidebar, SidebarMain, SidebarTitle, SidebarSubtitle, Link } from '../styles/styles'
+import useFathomGoal from '../hooks/useFathomGoal'
 import data from '../data.json'
 
 const getShortUrl = (url: string) => {
@@ -12,8 +12,8 @@ const getShortUrl = (url: string) => {
 }
 
 const Header: React.FC = () => {
-  const handleMailGoal = useGoal('NMFGPZ35')
-  const handleOrganizationGoal = useGoal('HBXPURPT')
+  const handleMailGoal = useFathomGoal('NMFGPZ35')
+  const handleOrganizationGoal = useFathomGoal('HBXPURPT')
 
   return (
     <Sidebar>

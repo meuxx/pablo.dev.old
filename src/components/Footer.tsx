@@ -1,13 +1,13 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useGoal } from 'gatsby-plugin-fathom'
 
 import { SidebarFooter, SidebarIconWrapper, SidebarIcon, SidebarIconLink } from '../styles/styles'
+import useFathomGoal from '../hooks/useFathomGoal'
 
 const Footer: React.FC = () => {
-  const handleMailGoal = useGoal('NMFGPZ35')
-  const handleGitHubGoal = useGoal('TUDCIJWD')
-  const handleLinkedInGoal = useGoal('VN1YOMWA')
+  const handleMailGoal = useFathomGoal('NMFGPZ35')
+  const handleGitHubGoal = useFathomGoal('TUDCIJWD')
+  const handleLinkedInGoal = useFathomGoal('VN1YOMWA')
 
   return (
     <SidebarFooter>

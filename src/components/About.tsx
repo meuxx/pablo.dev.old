@@ -1,9 +1,9 @@
 import React from 'react'
-import { useGoal } from 'gatsby-plugin-fathom'
 import { Section, SectionHeader, Button } from '../styles/styles'
+import useFathomGoal from '../hooks/useFathomGoal'
 
 const About: React.FC = () => {
-  const handleGoal = useGoal('V5LKNTOU')
+  const handleGoal = useFathomGoal('V5LKNTOU')
 
   return (
     <Section>
