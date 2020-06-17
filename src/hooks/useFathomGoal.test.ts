@@ -1,3 +1,4 @@
+import { renderHook } from '@testing-library/react-hooks'
 import useFathomGoal from './useFathomGoal'
 
 describe('useFathomGoal hook', () => {
@@ -7,7 +8,9 @@ describe('useFathomGoal hook', () => {
     })
 
     it('should not throw any error', () => {
-      const trackGoal = useFathomGoal('code')
+      const { result } = renderHook(() => useFathomGoal('code'))
+      const trackGoal = result.current
+
       trackGoal()
 
       expect(() => trackGoal()).not.toThrow()
@@ -26,17 +29,43 @@ describe('useFathomGoal hook', () => {
     })
 
     it('should call trackGoal with default cents', () => {
-      const trackGoal = useFathomGoal('code')
+      const { result } = renderHook(() => useFathomGoal('code'))
+      const trackGoal = result.current
+
       trackGoal()
 
       expect(window.fathom.trackGoal).toHaveBeenCalledWith('code', 0)
     })
 
     it('should call trackGoal with specified cents', () => {
-      const trackGoal = useFathomGoal('code', 100)
+      const { result } = renderHook(() => useFathomGoal('code', 100))
+      const trackGoal = result.current
+
       trackGoal()
 
       expect(window.fathom.trackGoal).toHaveBeenCalledWith('code', 100)
+    })
+
+    it('should return the same handler for the same input', () => {
+      const { result, rerender } = renderHook(() => useFathomGoal('code', 100))
+
+      const firstHandler = result.current
+      rerender()
+      const secondHandler = result.current
+
+      expect(firstHandler).toEqual(secondHandler)
+    })
+
+    it('should return a different handler for a different input', () => {
+      const { result, rerender } = renderHook(({ cents }) => useFathomGoal('code', cents), {
+        initialProps: { cents: 100 },
+      })
+
+      const firstHandler = result.current
+      rerender({ cents: 10 })
+      const secondHandler = result.current
+
+      expect(firstHandler).toEqual(secondHandler)
     })
   })
 })

@@ -39,6 +39,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "5.10.1",
     "@testing-library/react": "10.2.1",
+    "@testing-library/react-hooks": "3.3.0",
     "@types/jest": "26.0.0",
     "@types/styled-components": "5.1.0",
     "@typescript-eslint/eslint-plugin": "3.3.0",
@@ -79,7 +80,7 @@
     "cy:run": "cypress run",
     "clean": "gatsby clean && yarn exec rimraf ./node_modules ./coverage ./yarn-error.log",
     "lint": "eslint --ignore-path .gitignore . --ext js,jsx,ts,tsx",
-    "prettify": "prettier --list-different './src/**/*.{js,jsx,json,yml,yaml,css,less,scss,ts,tsx,md,graphql,mdx}'",
+    "prettify": "prettier --list-different './src/**/*.{js,jsx,json,yml,yaml,css,less,scss,ts,tsx,md,graphql,mdx}' package.json",
     "prettify:fix": "yarn prettify --write",
     "validate": "yarn lint && yarn prettify",
     "snyk-protect": "snyk protect"
