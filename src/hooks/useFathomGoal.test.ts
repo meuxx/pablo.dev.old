@@ -65,7 +65,7 @@ describe('useFathomGoal hook', () => {
       rerender({ cents: 10 })
       const secondHandler = result.current
 
-      expect(firstHandler).toEqual(secondHandler)
+      expect(firstHandler).not.toEqual(secondHandler)
     })
   })
 })
