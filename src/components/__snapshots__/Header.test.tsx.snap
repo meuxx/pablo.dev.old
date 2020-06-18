@@ -179,7 +179,7 @@ exports[`Header renders without crashing 1`] = `
           target="_blank"
           title="Sainsbury's"
         >
-          sainsburys.co.uk
+          Sainsburys.co.uk
         </a>
         <br />
         London, UK
