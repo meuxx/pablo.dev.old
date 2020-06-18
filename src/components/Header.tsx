@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 
 import Avatar from './Avatar'
 import Footer from './Footer'
@@ -6,14 +6,21 @@ import { Sidebar, SidebarMain, SidebarTitle, SidebarSubtitle, Link } from '../st
 import useFathomGoal from '../hooks/useFathomGoal'
 import data from '../data.json'
 
-const getShortUrl = (url: string) => {
-  const { hostname } = new URL(url)
-  return hostname.replace(/^(www\.)?/, '')
+const getShortUrl = (url: string): string => {
+  try {
+    const { hostname } = new URL(url)
+    const domain = hostname.replace(/^(www\.)?/, '')
+    return `${domain.charAt(0).toUpperCase()}${domain.slice(1)}`
+  } catch (e) {
+    return url
+  }
 }
 
 const Header: React.FC = () => {
   const handleMailGoal = useFathomGoal('NMFGPZ35')
   const handleOrganizationGoal = useFathomGoal('HBXPURPT')
+
+  const shortUrl = useMemo(() => getShortUrl(data.author.organizationUrl), [])
 
   return (
     <Sidebar>
@@ -46,7 +53,7 @@ const Header: React.FC = () => {
             title={data.author.organizationName}
             onClick={handleOrganizationGoal}
           >
-            {getShortUrl(data.author.organizationUrl)}
+            {shortUrl}
           </Link>
           <br />
           {`${data.author.city}, ${data.author.country}`}
