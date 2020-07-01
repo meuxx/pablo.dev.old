@@ -45,7 +45,7 @@
     "@typescript-eslint/eslint-plugin": "3.3.0",
     "@typescript-eslint/parser": "3.5.0",
     "babel-jest": "26.0.1",
-    "babel-preset-gatsby": "0.4.9",
+    "babel-preset-gatsby": "0.4.12",
     "cypress": "4.8.0",
     "eslint": "7.2.0",
     "eslint-config-prettier": "6.11.0",
