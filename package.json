@@ -54,7 +54,7 @@
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.20.3",
     "eslint-plugin-react-hooks": "4.0.8",
-    "gatsby-plugin-typescript": "2.4.13",
+    "gatsby-plugin-typescript": "2.4.16",
     "identity-obj-proxy": "3.0.0",
     "jest": "26.2.2",
     "jest-styled-components": "7.0.2",
