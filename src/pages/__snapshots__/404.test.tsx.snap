@@ -15,7 +15,6 @@ exports[`404 renders without crashing 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
-  color: #0B61A4;
 }
 
 .c3:hover {
@@ -23,6 +22,10 @@ exports[`404 renders without crashing 1`] = `
   color: #ffffff;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c4 {
+  color: #0B61A4;
 }
 
 .c1 {
@@ -127,7 +130,7 @@ exports[`404 renders without crashing 1`] = `
           You just hit a route that doesn't exist... the sadness.
         </p>
         <a
-          class="sc-AxirZ c3"
+          class="c3 c4"
           href="/"
         >
           Home

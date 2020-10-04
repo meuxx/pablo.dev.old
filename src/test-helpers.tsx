@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { render } from '@testing-library/react'
 import { Themed } from './styles/GlobalStyle'
 import React from 'react'

@@ -1,5 +1,9 @@
 {
   "baseUrl": "http://localhost:8000/",
   "integrationFolder": "cypress/e2e",
-  "screenshotsFolder": "cypress/screenshots"
+  "screenshotsFolder": "cypress/screenshots",
+  "fixturesFolder": false,
+  "supportFile": false,
+  "video": false,
+  "blockHosts": "haddock.pablo.dev"
 }

@@ -44,6 +44,12 @@
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off"
       }
+    },
+    {
+      "files": ["*.test.[jt]{s,sx}"],
+      "rules": {
+        "react/display-name": "off"
+      }
     }
   ]
 }
